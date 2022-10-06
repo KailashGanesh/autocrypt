@@ -1,0 +1,35 @@
+.container{
+    max-width: 1160px;
+    margin: auto;
+    padding: 0px 20px;
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+
+.mobile-hide{
+    display: none;
+}
+
+.link{
+    color: inherit;
+    cursor: pointer;
+}
+
+// table and above
+@media only screen and (min-width: 768px) {
+    .mobile-hide{
+        display: inline-block;
+    }
+
+    .desktop-hide{
+        display: none;
+    }
+
+    .col{
+        width: 50%;
+        float: left;
+    }
+}

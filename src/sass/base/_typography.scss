@@ -1,9 +1,10 @@
 body {
-    font-family: 'Rubik', sans-serif;
+    font-family: $font;
+    font-size: 100%;
 }
 
 h1, h2, h3, .heading {
-    font-weight: 700;
+    font-weight: $font-bold;
 }
 
 a, a:visited, a:active{

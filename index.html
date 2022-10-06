@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,9 @@
     <link rel="stylesheet" href="./dist/style.css">
     <script src="./dist/script.js" defer></script>
 </head>
+
 <body>
-   <header class="header">
+    <header class="header">
         <nav class="nav clear-fix container">
             <!-- autocryp -->
             <ul class="nav__left">
@@ -39,21 +41,39 @@
                         <svg class="icon-menu">
                             <use xlink:href="./dist/image.svg#icon-menu"></use>
                         </svg>
-                     </a>
+                    </a>
                 </li>
             </ul>
 
         </nav>
-   </header> 
+    </header>
 
-   <main>
+    <div class="overlay" id="mobile-menu">
+        <div class="overlay__closeBtn">
+            <a onclick="closeNav()" class="link">&times;</a>
+        </div>
+        <ul class="overlay__nav">
+            <li><a href="#0" onclick="closeNav()">Benefit</a></li>
+            <li><a href="#0" onclick="closeNav()">Pricing</a></li>
+            <li><a href="#0" onclick="closeNav()">Testimonials</a></li>
+            <li><a href="#0" onclick="closeNav()">Client</a></li>
+            <hr />
+            <li><a href="#0" onclick="closeNav()">Login</a></li>
+            <li><a href="#0" onclick="closeNav()" class="btn btn--sm">Register</a></li>
+        </ul>
+    </div>
+
+    <main>
         <section class="hero">
             <div class="container clear-fix">
                 <div class="col">
                     <div class="hero__content">
                         <article>
-                            <h1 class="heading--lg hero__heading">Easiest way to mining your bitcoin</h1>
-                            <p class="body-text hero__body">Autocryp is the place to buy and sell Bitcoin, Ethereum and various kinds of Digital Assets in Indonesia. Then, book your weekly, bi-weekly or one-off clean online with imminent confirmation.</p>
+                            <h1 class="heading--lg hero__heading">Easiest way to
+                                mining your bitcoin</h1>
+                            <p class="body-text hero__body">Autocryp is the place to buy and sell Bitcoin, Ethereum and
+                                various kinds of Digital Assets in Indonesia. Then, book your weekly, bi-weekly or
+                                one-off clean online with imminent confirmation.</p>
                         </article>
                         <a href="#0" class="btn btn--lg">Get Started</a>
                     </div>
@@ -66,8 +86,9 @@
                 </div>
             </div>
         </section>
-   </main>
+    </main>
 
-   <footer></footer>
+    <footer></footer>
 </body>
+
 </html>
