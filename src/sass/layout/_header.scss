@@ -23,6 +23,7 @@
 
     &__logo{
         font-size: 26px;
+        color: white;
     }
 }
 
@@ -38,8 +39,9 @@
         display: inline-block;
     }
 
-    a{
+    &__link{
         color: white;
+        @include link
     }
 
     &__left{
@@ -77,7 +79,7 @@
     }
 }
 
-.icon-menu{
+.hamburger{
     fill: white;
     height: 30px;
     width: 30px;

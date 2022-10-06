@@ -9,3 +9,12 @@
 @mixin for-tablet-portrait-up{
     @media (min-width: 600px) {@content;}
 }
+
+@mixin link {
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+
+    &:hover{
+        color: $primary-green;
+    }
+}
