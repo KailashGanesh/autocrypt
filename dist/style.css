@@ -74,7 +74,7 @@ a, a:visited, a:active {
 }
 @media (max-width: 767px) {
   .btn-group .btn {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 .btn-group .btn:not(:last-child) {
@@ -379,11 +379,6 @@ a, a:visited, a:active {
   margin: 0px auto 60px auto;
   width: fit-content;
   font-size: 0;
-}
-@media (max-width: 767px) {
-  .price__btnGroup {
-    width: 100%;
-  }
 }
 .price__cards {
   width: 100%;
