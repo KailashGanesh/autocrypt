@@ -1,0 +1,55 @@
+.footer{
+    padding: 0px 0px 114px 0px;
+    &__heading{
+        text-align: center;
+        color: $marine;
+        font-weight: $font-bold;
+        margin-bottom: 50px;
+    }
+
+    &__svgs{
+        width: fit-content;
+        margin: auto;
+        margin-bottom: 180px;
+        font-size: 0;
+        text-align: center;
+    }
+
+    &__svg{
+        margin: 30px 40px 0px 0px;
+        vertical-align: middle;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    &__copyright{
+        font-weight: 300;
+        color: $slate-blue;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    &__nav{
+        text-align: center;
+        color: $slate-blue;
+        font-size: 16px;
+
+        @include for-phone-down{
+            font-size: 14px;
+        }
+
+        li{
+            display: inline-block;
+            margin-right: 20px;
+            line-height: 2;
+
+            &:not(:first-child):before{
+                padding-right: 20px;
+                content: '/';
+            }
+        }
+    }
+
+}
