@@ -6,7 +6,6 @@
 // utilities
 @import 'utilities/variables';
 @import 'utilities/mixins';
-@import 'utilities/helpers';
 
 // base
 @import 'base/reset';
@@ -14,6 +13,8 @@
 
 // components
 @import 'components/buttons';
+@import'components/card';
+@import 'components/feature';
 
 // layout
 
@@ -21,4 +22,9 @@
 @import 'layout/header';
 @import 'layout/mobileNavOverlay';
 @import 'layout/hero';
+@import 'layout/features';
+@import 'layout/price';
+
+@import 'utilities/helpers';
 @import 'layout/grid';
+

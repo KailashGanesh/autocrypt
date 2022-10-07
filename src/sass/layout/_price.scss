@@ -1,0 +1,31 @@
+.price{
+    font-size: 0;
+    padding: 200px 0px;
+
+    @include for-tablet-portrait-down{
+        // text-align: left;
+    }
+
+
+    &__heading{
+        margin:0px auto 60px auto;
+        max-width: 29ch;
+        text-align: center;
+
+        @include for-tablet-portrait-down{
+            // max-width: 100%;
+        }
+    }
+    &__btnGroup{
+        margin:0px auto 60px auto;
+        width: fit-content;
+        font-size: 0;
+
+        @include for-phone-down{
+            width: 100%;
+        }
+    }
+    &__cards{
+        width: 100%;
+    }
+}

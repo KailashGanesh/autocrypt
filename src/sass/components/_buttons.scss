@@ -39,6 +39,10 @@
         border-radius: 5px;
         padding: 20px 30px;
         font-weight: 700;
+
+        @include for-phone-down{
+            font-size: 15px;
+        }
     }
 
     .btn:not(:last-child){
