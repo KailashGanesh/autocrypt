@@ -1,9 +1,13 @@
 function openNav(){
     document.getElementById("mobile-menu").style.width = "100%";
+    document.documentElement.style.overflow = 'hidden';
+    document.body.scroll = "no";
 }
 
 function closeNav(){
     document.getElementById("mobile-menu").style.width = "0";
+    document.documentElement.style.overflow = 'scroll';
+    document.body.scroll = "yes";
 }
 
 function changeNavColor(color){
@@ -33,3 +37,35 @@ document.addEventListener('scroll', (e) => {
         changeNavColor()
     }
 })
+
+
+// import Splide from '@splidejs/splide';
+
+let splide = document.getElementById('splide');
+
+new Splide( splide, {
+    type   : 'loop',
+    perPage: 2,
+    focus  : 'center',
+  } ).mount();
+
+
+
+// prices
+
+let monthlyBtn = document.getElementById("monthly");
+let yearlyBtn = document.getElementById("yearly");
+let yearlyCards = document.getElementById("yearlyCards");
+let monthlyCards = document.getElementById("monthlyCards");
+
+yearlyBtn.addEventListener('click', () => {
+    yearlyCards.style.display = "block";
+    yearlyCards.style.textAlign = "center";
+    monthlyCards.style.display = "none";
+
+});
+monthlyBtn.addEventListener('click', () => {
+    yearlyCards.style.display = "none";
+    monthlyCards.style.display = "block";
+
+});

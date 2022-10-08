@@ -325,6 +325,47 @@ a, a:visited, a:active {
   margin-top: 30%;
 }
 
+.modelInput {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1001;
+  backdrop-filter: blur(2px);
+  color: black;
+}
+.modelInput__con {
+  border-radius: 10px;
+  background-color: white;
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.modelInput__closeBtn {
+  text-align: right;
+}
+.modelInput__smallText {
+  font-weight: 300;
+  color: #313a5a;
+  margin-bottom: 20px;
+}
+.modelInput__input {
+  display: block;
+  margin: 0 auto 10px auto;
+  outline: none;
+}
+.modelInput__submitBtn {
+  margin: 0 auto 10px auto;
+  border: 0;
+}
+
 .hero {
   height: 100vh;
   background-color: #313a5a;

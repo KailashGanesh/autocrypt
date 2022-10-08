@@ -8,10 +8,28 @@
     <title>Autocryp</title>
 
     <link rel="stylesheet" href="./dist/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js" defer></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide-core.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
     <script src="./dist/script.js" defer></script>
 </head>
 
 <body>
+    <div class="modelInput" id="modelInput">
+        <div class="modelInput__con">
+            <div class="modelInput__closeBtn">
+                <a onclick="closeNav()" class="link">&times;</a>
+            </div>
+            <p class="heading heading--sm modelInput__heading">Get Started</p>
+            <p class="modelInput__smallText">register in 20 minutes</p>
+            <input class="modelInput__input" type="text" placeholder="Enter your name">
+            <input class="modelInput__input" type="text" placeholder="E-mail">
+            <input class="modelInput__input" type="text" placeholder="Password">
+            <input class="btn btn--sm modelInput__submitBtn" type="button" value="Register">
+            <hr>
+            <p>Already a member <a href="#0" class="link">Log in here</a></p>
+        </div>
+    </div>
     <header class="header">
         <nav class="nav clear-fix container">
             <!-- autocryp -->
@@ -62,6 +80,7 @@
             <li><a href="#0" onclick="closeNav()" class="btn btn--sm">Register</a></li>
         </ul>
     </div>
+
 
     <main>
         <section class="hero">
@@ -149,11 +168,11 @@
                 <h2 class=" price__heading heading heading--md">Paid plan starts with a 7-day free trial, No credit card
                     required</h2>
                 <div class="price__btnGroup btn-group">
-                    <a href="#0" class="btn btn--sm btn--active">MONTHLY</a>
-                    <a href="#0" class="btn btn--sm">YEARLY - 2 MONTH FREE</a>
+                    <a href="#0" class="btn btn--sm btn--active" id="monthly">MONTHLY</a>
+                    <a href="#0" class="btn btn--sm" id="yearly">YEARLY - 2 MONTH FREE</a>
                 </div>
 
-                <div class="price__cards">
+                <div class="price__cards" id="monthlyCards">
                     <!-- card 1 -->
                     <div class="card">
                         <p class="heading heading--sm card__heading">Starter</p>
@@ -196,6 +215,46 @@
                         <a href="#0" class="btn btn--long card__btn">START FREE TRIAL</a>
                     </div>
                 </div>
+                <div class="price__cards" style="display: none;" id="yearlyCards">
+                    <!-- Hidden card 1 -->
+                    <div class="card">
+                        <p class="heading heading--sm card__heading">Business</p>
+                        <p class="card__price">$100</p>
+                        <p class="card__smallText">Per Month</p>
+
+                        <ul class="card__list">
+                            <li>Unlimited Pixel ID*</li>
+                            <li>Unlimited Custom URL</li>
+                            <li>Unlimited shortened links / month</li>
+                            <li>Unlimited Member</li>
+                        </ul>
+                        <a href="#0" class="btn btn--long card__btn">START FREE TRIAL</a>
+                    </div>
+                    <!-- Hidden card 2 -->
+                    <div class="card card--best">
+                        <p class="heading heading--sm card__heading">Business</p>
+                        <p class="card__price">$100</p>
+                        <p class="card__smallText">Per Month</p>
+
+                        <ul class="card__list">
+                            <li>Unlimited Pixel ID*</li>
+                            <li>Unlimited Custom URL</li>
+                            <li>Unlimited shortened links / month</li>
+                            <li>Unlimited Member</li>
+                        </ul>
+                        <a href="#0" class="btn btn--long card__btn">START FREE TRIAL</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="splide" aria-label="Splide Basic HTML Example" id="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">Slide 01</li>
+                    <li class="splide__slide">Slide 02</li>
+                    <li class="splide__slide">Slide 03</li>
+                </ul>
             </div>
         </section>
 
