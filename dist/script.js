@@ -82,6 +82,8 @@ function openModel(){
       model.style.transform = 'scale(1)';
     },0);
 
+    model.style.backdropFilter = "blur(6px)";
+
     // prevent  background scroll
     document.documentElement.style.overflow = 'hidden';
     document.body.scroll = 'no';
@@ -89,6 +91,7 @@ function openModel(){
 
 function closeModel(){
     model.style.opacity = 0;
+    model.style.backdropFilter = "blur(0px)";
     model.style.transform = 'scale(0)';
     window.setTimeout(function(){
       model.style.display = 'none';

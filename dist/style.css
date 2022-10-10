@@ -335,7 +335,7 @@ a, a:visited, a:active {
 }
 @media only screen and (min-width: 1020px) {
   .nav__left {
-    width: 20%;
+    width: 25%;
   }
 }
 .nav__center {
@@ -352,7 +352,7 @@ a, a:visited, a:active {
 }
 .nav__right {
   display: inline-block;
-  width: 30%;
+  width: 25%;
   text-align: end;
   font-size: 16px;
   font-weight: 300;
@@ -421,11 +421,10 @@ a, a:visited, a:active {
   bottom: 0;
   max-width: 100vw;
   z-index: 20;
-  backdrop-filter: blur(5px);
   color: black;
   display: none;
   transform: scale(0);
-  transition: 0.3s ease-in-out opacity, 0.3s ease-in-out transform;
+  transition: 0.3s ease-in-out opacity, 0.3s ease-in-out transform, backdrop-filter 0.3s ease-in-out;
   opacity: 0;
 }
 .modelInput__form {
