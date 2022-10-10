@@ -59,7 +59,7 @@ new Splide( splide, {
     focus  : 'center',
     arrows: false,
     autowidth: false,
-    updateOnMove: true,
+    // updateOnMove: true,
     snap: true,
     breakpoints:{ 470:{ fixedWidth: '90%', } }
   } ).mount();

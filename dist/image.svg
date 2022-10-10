@@ -55,7 +55,7 @@
     </symbol>
 
     <symbol id="quote" viewBox="0 0 49 40">
-        <g fill="#FFF" fill-rule="evenodd">
+        <g  fill-rule="evenodd">
             <path d="M0 0h18v18.947L0 40zM31 0h18v18.947L31 40z"/>
         </g>
     </symbol>

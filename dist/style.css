@@ -576,19 +576,46 @@ a, a:visited, a:active {
 }
 .splide__slide {
   background-color: rgba(255, 255, 255, 0.95);
-}
-
-.splide__slide {
-  transition: all 0.2s ease-in-out 0.2s;
   border-radius: 6px;
   padding: 80px 50px 60px 50px;
 }
+.splide__slideQuote {
+  margin-bottom: 20px;
+  fill: #1fdb84;
+}
+.splide__body {
+  font-size: 18px;
+  color: #5b6c94;
+  margin-bottom: 40px;
+  line-height: 2;
+}
+.splide__auth {
+  font-size: 18px;
+  color: #031d5b;
+  font-weight: 500;
+}
+.splide__auth span {
+  font-weight: 300;
+}
 
-.splide__slide, .is-prev {
+.is-active .is-active .splide__slideQuote {
+  fill: white;
+}
+.is-active .is-active .splide__body {
+  color: white;
+}
+.is-active .is-active .splide__auth {
+  color: white;
+}
+
+.splide__slide,
+.is-prev {
   visibility: hidden;
 }
 
-.is-active, .is-next, .is-next + .splide__slide {
+.is-active,
+.is-next,
+.is-next + .splide__slide {
   visibility: visible;
 }
 

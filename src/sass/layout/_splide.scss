@@ -1,9 +1,9 @@
-.splide{
-    background: linear-gradient(90deg,  #f8f9fc 40%, #313a5a 40%);
+.splide {
+    background: linear-gradient(90deg, #f8f9fc 40%, #313a5a 40%);
     padding: 200px 0;
     position: relative;
 
-    &__quote{
+    &__quote {
         position: absolute;
         top: 30px;
         left: 250px;
@@ -12,50 +12,93 @@
         background-size: auto 325px;
         background-repeat: no-repeat;
 
-        @include for-tablet-portrait-down{
+        @include for-tablet-portrait-down {
             width: 50%;
             height: auto;
             left: 20px;
             background-size: auto 80%;
         }
 
-        @include for-phone-down{
+        @include for-phone-down {
             background-size: auto 40%;
         }
 
     }
 
-    &__heading{
+    &__heading {
         max-width: 12ch;
         margin: 40px 0 0 10px;
 
-        @include for-tablet-portrait-down{
+        @include for-tablet-portrait-down {
             font-size: 30px;
         }
-        @include for-phone-down{
+
+        @include for-phone-down {
             font-size: 20px;
             margin-left: 5px;
         }
     }
 
-    &__slide{
+    &__slide {
         background-color: rgba(255, 255, 255, 0.95);
+        // transition: all 0.1s ease-in-out;
+        border-radius: 6px;
+        padding: 80px 50px 60px 50px;
+    }
+
+    &__slideQuote {
+        margin-bottom: 20px;
+        fill: $primary-green;
+    }
+
+    &__body {
+        font-size: 18px;
+        color: $slate-blue;
+        margin-bottom: 40px;
+        line-height: 2;
+    }
+
+    &__auth {
+        font-size: 18px;
+        color: $marine;
+        font-weight: 500;
+
+        span {
+            font-weight: 300;
+        }
     }
 }
-.splide__slide{
-    transition: all 0.2s ease-in-out 0.2s;
-    border-radius: 6px;
-    padding:80px 50px 60px 50px;
+
+
+
+.is-active {
+
+    // transition: all 0.1s ease-in-out;
+    .is-active .splide__slideQuote {
+        fill: white;
+    }
+
+    .is-active .splide__body {
+        color: white;
+    }
+
+    .is-active .splide__auth {
+        color: white;
+    }
 }
 
-.splide__slide, .is-prev{
+.splide__slide,
+.is-prev {
     visibility: hidden;
 }
 
-.is-active, .is-next, .is-next + .splide__slide{
-    visibility:visible;
+.is-active,
+.is-next,
+.is-next+.splide__slide {
+    visibility: visible;
 }
-.is-active{
+
+.is-active {
     background-color: $primary-green;
 }
 
@@ -63,12 +106,12 @@
     display: none;
 }
 
-.splide__pagination__page{
+.splide__pagination__page {
     background-color: transparent;
     border: 1px solid white;
 }
 
-.presentation >.is-active{
+.presentation>.is-active {
     background-color: white;
 }
 
@@ -76,7 +119,7 @@
     bottom: 5.5em;
 }
 
-.splide__pagination__page{
+.splide__pagination__page {
     height: 12px;
     width: 12px;
     margin: 4px;
