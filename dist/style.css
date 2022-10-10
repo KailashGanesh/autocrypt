@@ -297,13 +297,14 @@ a, a:visited, a:active {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 5;
+  z-index: 10;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
   transition: all 0.5s ease-in-out 0s;
   color: white;
+  backdrop-filter: blur(6px);
 }
 .overlay a {
   color: white;
@@ -333,7 +334,7 @@ a, a:visited, a:active {
   bottom: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1001;
+  z-index: 20;
   backdrop-filter: blur(2px);
   color: black;
 }
@@ -394,7 +395,7 @@ a, a:visited, a:active {
 
 .features {
   margin-top: -50px;
-  z-index: 15;
+  z-index: 5;
   position: relative;
   font-size: 0;
 }
