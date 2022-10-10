@@ -81,6 +81,23 @@ function closeModel(){
     document.body.scroll = 'yes';
 }
 
+// show password btn
+
+let showPassword = document.getElementById('showPassword');
+let passwordInput = document.getElementById('passwordField')
+let passwordInputIcon = document.getElementById('showPasswordIcon')
+
+showPassword.addEventListener('click', () => {
+    if (passwordInput.type == "password"){
+        passwordInput.type ='text';
+        console.log(passwordInputIcon)
+        passwordInputIcon.setAttribute('xlink:href', "./dist/image.svg#eye-solid")
+    }else{
+        passwordInput.type ='password';
+        passwordInputIcon.setAttribute('xlink:href', "./dist/image.svg#eye-slash-solid")
+    }
+});
+
 
 // == prices ==
 
@@ -100,3 +117,20 @@ monthlyBtn.addEventListener('click', () => {
     monthlyCards.style.display = "block";
 
 });
+
+// let cards = document.querySelectorAll('.card');
+// cards[1].classList.add("card--best");
+// for(let i = 0; i < cards.length; i++){
+//     cards[i].addEventListener('mouseover', (e) => {
+//         if(e.target.classList == "card"){
+//             cards[1].classList.remove("card--best");
+//             e.target.classList.add("card--best");
+//         }else{
+//             e.target.parrentElement.add("card--best");
+//         }
+//     })
+
+//     cards[i].addEventListener('mouseout', (e) => {
+//             e.target.classList.remove("card--best");
+//     })
+// }

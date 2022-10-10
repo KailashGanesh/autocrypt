@@ -261,7 +261,7 @@
             <nav class="footer__nav">
                 <ul>
                     <li><a href="#benefit" class="link">Benefit</a></li>
-                    <li><a href="#priceing" class="link">Pricing</a></li>
+                    <li><a href="#pricing" class="link">Pricing</a></li>
                     <li><a href="#splide" class="link">Testimonials</a></li>
                     <li><a href="#client" class="link">Clients</a></li>
                 </ul>
@@ -291,14 +291,26 @@
             </div>
             <p class="heading heading--sm modelInput__heading">Get Started</p>
             <p class="modelInput__smallText">register in 20 minutes</p>
-            <form action="/">
-                <input class="modelInput__input" type="text" placeholder="Enter your name" required>
-                <input class="modelInput__input" type="email" placeholder="E-mail" required>
-                <input class="modelInput__input" type="password" placeholder="Password" required>
+            <form action="/" class="modelInput__form">
+                <div class="field">
+                    <input class="field__input" type="text" placeholder="Enter your name" required>
+                    <label for="Name" class="field__label">Name</label>
+                </div>
+                <div class="field">
+                    <input class="field__input" type="email" placeholder="eg. bob@gmail.com" required>
+                    <label for="email" class="field__label">Email</label>
+                </div>
+                <div class="field field--password">
+                    <input class="field__input" type="password" placeholder="Enter your password" required id="passwordField">
+                    <label for="password" class="field__label">Password</label>
+                    <svg class="field__showPassword" id="showPassword">
+                        <use xlink:href="./dist/image.svg#eye-slash-solid" width="20" height="20" id="showPasswordIcon"></use>
+                    </svg>
+
+                </div>
                 <input class="btn btn--sm modelInput__submitBtn" type="submit" value="Sign up">
             </form>
-            <hr>
-            <p>Already a member <a href="#0" class="link">Log in here</a></p>
+            <p>Already a member <a href="#0" class="modelInput__login">Log in here</a></p>
         </div>
     </div>
 </body>

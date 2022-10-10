@@ -1,0 +1,85 @@
+.field{
+    position: relative;
+    width: 20rem;
+    height: 3rem;
+
+    &__input{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid $slate-blue;
+        border-radius: 10px 0px;
+        font-family: inherit;
+        font-size: inherit;
+        color: $slate-blue;
+        outline: none;
+        padding: 1.25rem;
+        background: none;
+        outline: none;
+        transition: all 0.3s ease-in-out 0s;
+
+        &:hover {
+            border-color: $field-border-color;
+        }
+
+        /* Change border when input focus*/
+        &:focus {
+            border-color: $primary-green;
+            transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+            &::placeholder{
+                color: $slate-blue;
+            }
+        }
+
+        &::placeholder{
+            color: transparent;
+        }
+
+    }
+
+    &__label{
+        position: absolute;
+        left: 1rem;
+        top: 0.8rem;
+        padding: 0 0.5rem;
+        color: white;
+        cursor: text;
+        transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+        background-color: white;
+        color: black;
+    }
+
+    &__showPassword{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out 0s;
+
+        &:hover{
+            fill: $primary-green;
+        }
+    }
+}
+
+
+.field__input:focus ~ .field__label,
+.field__input:not(:placeholder-shown).field__input:not(:focus) ~ .field__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+
+
+.field--password{
+
+    .field__input{
+        padding-right: 40px;
+    }
+
+}
