@@ -1,0 +1,83 @@
+.splide{
+    background: linear-gradient(90deg,  #f8f9fc 40%, #313a5a 40%);
+    padding: 200px 0;
+    position: relative;
+
+    &__quote{
+        position: absolute;
+        top: 30px;
+        left: 250px;
+        min-height: 351px;
+        background-image: url(../../../assests/images/green-quote.svg);
+        background-size: auto 325px;
+        background-repeat: no-repeat;
+
+        @include for-tablet-portrait-down{
+            width: 50%;
+            height: auto;
+            left: 20px;
+            background-size: auto 80%;
+        }
+
+        @include for-phone-down{
+            background-size: auto 40%;
+        }
+
+    }
+
+    &__heading{
+        max-width: 12ch;
+        margin: 40px 0 0 10px;
+
+        @include for-tablet-portrait-down{
+            font-size: 30px;
+        }
+        @include for-phone-down{
+            font-size: 20px;
+            margin-left: 5px;
+        }
+    }
+
+    &__slide{
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+}
+.splide__slide{
+    transition: all 0.2s ease-in-out 0.2s;
+    border-radius: 6px;
+    padding:80px 50px 60px 50px;
+}
+
+.splide__slide, .is-prev{
+    visibility: hidden;
+}
+
+.is-active, .is-next, .is-next + .splide__slide{
+    visibility:visible;
+}
+.is-active{
+    background-color: $primary-green;
+}
+
+.splide:not(.is-overflow) .splide__arrows {
+    display: none;
+}
+
+.splide__pagination__page{
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.presentation >.is-active{
+    background-color: white;
+}
+
+.splide__pagination {
+    bottom: 5.5em;
+}
+
+.splide__pagination__page{
+    height: 12px;
+    width: 12px;
+    margin: 4px;
+}

@@ -50,10 +50,27 @@ document.addEventListener('scroll', (e) => {
 let splide = document.getElementById('splide');
 
 new Splide( splide, {
+    // clones  : 0,
     type   : 'loop',
-    perPage: 2,
+    fixedWidth : '420px',
+    fixedHeight : '500px',
+    gap: '40px',
+    perPage: 1,
     focus  : 'center',
+    arrows: false,
+    autowidth: false,
+    updateOnMove: true,
+    snap: true,
+    breakpoints:{ 470:{ fixedWidth: '90%', } }
   } ).mount();
+
+let slides = document.getElementsByClassName('splide__slide')
+
+console.log(slides)
+
+for (let i = 0; i < slides.length; i++){
+    console.log(slides[i].classList.value)
+}
 
 // == model == 
 
@@ -65,7 +82,6 @@ function openModel(){
       model.style.transform = 'scale(1)';
     },0);
 
-    model.style.backdrop
     // prevent  background scroll
     document.documentElement.style.overflow = 'hidden';
     document.body.scroll = 'no';
@@ -109,12 +125,15 @@ yearlyBtn.addEventListener('click', () => {
     yearlyCards.style.display = "block";
     yearlyCards.style.textAlign = "center";
     monthlyCards.style.display = "none";
+    yearlyBtn.classList.add('btn--active')
+    monthlyBtn.classList.remove('btn--active')
 
 });
 monthlyBtn.addEventListener('click', () => {
     yearlyCards.style.display = "none";
     monthlyCards.style.display = "block";
-
+    monthlyBtn.classList.add('btn--active')
+    yearlyBtn.classList.remove('btn--active')
 });
 
 // let cards = document.querySelectorAll('.card');
