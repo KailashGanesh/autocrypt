@@ -17,9 +17,10 @@
     fill: var(--main-white-color);
     color: white;
     transition: all 0.2s ease-in-out 0s;
-    z-index: 4;
+    z-index: $header-z-index;
     background-color: transparent;
     padding-top: 20px;
+    backdrop-filter: blur(10px);
 
     &__logo{
         font-size: 26px;
@@ -96,7 +97,7 @@
     vertical-align: middle;
 
     &:hover{
-    fill: var(--main-blue-color);
+    fill: $primary-green;
     }
 }
 

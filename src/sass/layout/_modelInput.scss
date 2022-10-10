@@ -8,8 +8,13 @@
     width: 100vw;
     height: 100vh;
     z-index: $model-z-index;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(12px);
     color: black;
+    display: none;
+    transform: scale(0);
+    transition: .6s ease-in-out opacity,.6s ease-in-out transform;
+    opacity: 0;
+
 
     &__con{
         border-radius: 10px;
