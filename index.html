@@ -27,15 +27,15 @@
             </ul>
 
             <ul class="nav__center mobile-hide">
-                <li><a href="#0" class="nav__link">Benefit</a></li>
-                <li><a href="#0" class="nav__link">Pricing</a></li>
-                <li><a href="#0" class="nav__link">Testimonials</a></li>
-                <li><a href="#0" class="nav__link">Client</a></li>
+                <li><a href="#benefit" class="nav__link">Benefit</a></li>
+                <li><a href="#pricing" class="nav__link">Pricing</a></li>
+                <li><a href="#splide" class="nav__link">Testimonials</a></li>
+                <li><a href="#client" class="nav__link">Client</a></li>
             </ul>
 
             <ul class="nav__right mobile-hide">
                 <li><a href="#0" class="nav__link">Login</a></li>
-                <li><a href="#0" class="btn btn--sm" onclick="openModel()">Register</a></li>
+                <li><a  class="btn btn--sm" onclick="openModel()">Register</a></li>
             </ul>
 
             <ul class="nav__right desktop-hide">
@@ -75,7 +75,7 @@
             </div>
         </section>
 
-        <section class="features">
+        <section class="features" id="benefit">
             <div class="container--lg features__container">
                 <div class="container--sm">
 
@@ -134,7 +134,7 @@
 
         </section>
 
-        <section class="price">
+        <section class="price" id="pricing">
             <div class="container">
                 <h2 class=" price__heading heading heading--md">Paid plan starts with a 7-day free trial, No credit card
                     required</h2>
@@ -234,7 +234,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="client">
         <div class="container">
             <p class="footer__heading">WORKS WITH ANY PLATFORM</p>
             <div class="footer__svgs">
@@ -260,10 +260,10 @@
             <p class="footer__copyright">&copy; 2018 Autocryp All Right Reserved</p>
             <nav class="footer__nav">
                 <ul>
-                    <li><a href="#0" class="link">Benefit</a></li>
-                    <li><a href="#0" class="link">Pricing</a></li>
-                    <li><a href="#0" class="link">Testimonials</a></li>
-                    <li><a href="#0" class="link">Clients</a></li>
+                    <li><a href="#benefit" class="link">Benefit</a></li>
+                    <li><a href="#priceing" class="link">Pricing</a></li>
+                    <li><a href="#splide" class="link">Testimonials</a></li>
+                    <li><a href="#client" class="link">Clients</a></li>
                 </ul>
             </nav>
         </div>
@@ -274,10 +274,10 @@
             <a onclick="closeNav()" class="link">&times;</a>
         </div>
         <ul class="overlay__nav">
-            <li><a href="#0" onclick="closeNav()" class="link">Benefit</a></li>
-            <li><a href="#0" onclick="closeNav()" class="link">Pricing</a></li>
-            <li><a href="#0" onclick="closeNav()" class="link">Testimonials</a></li>
-            <li class="border-bottom"><a href="#0" onclick="closeNav()" class="link">Client</a></li>
+            <li><a href="#benefit" onclick="closeNav()" class="link">Benefit</a></li>
+            <li><a href="#pricing" onclick="closeNav()" class="link">Pricing</a></li>
+            <li><a href="#splide" onclick="closeNav()" class="link">Testimonials</a></li>
+            <li class="border-bottom"><a href="#client" onclick="closeNav()" class="link">Client</a></li>
             <!-- <hr /> -->
             <li><a href="#0" onclick="closeNav()" class="link">Login</a></li>
             <li><a href="#0" onclick="closeNav(); openModel()" class="btn btn--sm">Register</a></li>
@@ -291,17 +291,12 @@
             </div>
             <p class="heading heading--sm modelInput__heading">Get Started</p>
             <p class="modelInput__smallText">register in 20 minutes</p>
-            <input class="modelInput__input" type="text" placeholder="Enter your name" required>
-            <input class="modelInput__input" type="text" placeholder="E-mail" required>
-            <input class="modelInput__input" type="text" placeholder="Password" required>
-            <div class="field">
-                <!-- <label for="email" class="ha-screen-reader">E-mail</label> -->
-                <input id="email" class="field__input" placeholder="e.g. bob@gmail.com" required>
-                <span class="field__label-wrap" aria-hidden="true">
-                  <span class="field__label">E-mail</span>
-                </span>
-            </div>
-            <input class="btn btn--sm modelInput__submitBtn" type="button" value="Sign up">
+            <form action="/">
+                <input class="modelInput__input" type="text" placeholder="Enter your name" required>
+                <input class="modelInput__input" type="email" placeholder="E-mail" required>
+                <input class="modelInput__input" type="password" placeholder="Password" required>
+                <input class="btn btn--sm modelInput__submitBtn" type="submit" value="Sign up">
+            </form>
             <hr>
             <p>Already a member <a href="#0" class="link">Log in here</a></p>
         </div>
