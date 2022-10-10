@@ -90,11 +90,10 @@ let passwordInputIcon = document.getElementById('showPasswordIcon')
 showPassword.addEventListener('click', () => {
     if (passwordInput.type == "password"){
         passwordInput.type ='text';
-        console.log(passwordInputIcon)
-        passwordInputIcon.setAttribute('xlink:href', "./dist/image.svg#eye-solid")
+        passwordInputIcon.setAttribute('xlink:href', "./dist/image.svg#eye-slash-solid")
     }else{
         passwordInput.type ='password';
-        passwordInputIcon.setAttribute('xlink:href', "./dist/image.svg#eye-slash-solid")
+        passwordInputIcon.setAttribute('xlink:href', "./dist/image.svg#eye-solid")
     }
 });
 
