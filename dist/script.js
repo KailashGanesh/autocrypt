@@ -1,17 +1,23 @@
+// == mobile nav ==
 function openNav(){
     document.getElementById("mobile-menu").style.width = "100%";
+    document.getElementById("mobile-menu").style.padding = "0 40px";
     document.documentElement.style.overflow = 'hidden';
     document.body.scroll = "no";
 }
 
 function closeNav(){
     document.getElementById("mobile-menu").style.width = "0";
+    document.getElementById("mobile-menu").style.padding = "0";
     document.documentElement.style.overflow = 'scroll';
     document.body.scroll = "yes";
 }
 
+
+// == sticky header ==
+
 function changeNavColor(color){
-    let white = "rgb(0,0,0,0.9)"
+    let white = "rgb(0,0,0,0.7)"
     if (color == "white"){
         header.style.backgroundColor = white;
         header.style.position = "fixed";
@@ -21,7 +27,7 @@ function changeNavColor(color){
     }else{
         header.style.backgroundColor= "transparent";
         header.style.position = "absolute" ;
-        header.style.paddingTop = "56px"
+        header.style.paddingTop = "20px"
         header.style.paddingBottom = "0px"
         console.log("turned initial")
     }
@@ -39,7 +45,7 @@ document.addEventListener('scroll', (e) => {
 })
 
 
-// import Splide from '@splidejs/splide';
+// == slider with plugin ==
 
 let splide = document.getElementById('splide');
 
@@ -49,9 +55,34 @@ new Splide( splide, {
     focus  : 'center',
   } ).mount();
 
+// == model == 
+
+let model = document.getElementById("modelInput")
+function openModel(){
+    model.style.display = 'block';
+    window.setTimeout(function(){
+      model.style.opacity = 1;
+      model.style.transform = 'scale(1)';
+    },0);
+
+    model.style.backdrop
+    // prevent  background scroll
+    document.documentElement.style.overflow = 'hidden';
+    document.body.scroll = 'no';
+}
+
+function closeModel(){
+    model.style.opacity = 0;
+    model.style.transform = 'scale(0)';
+    window.setTimeout(function(){
+      model.style.display = 'none';
+    },700); // timed to match animation-duration
+    document.documentElement.style.overflow = 'scroll';
+    document.body.scroll = 'yes';
+}
 
 
-// prices
+// == prices ==
 
 let monthlyBtn = document.getElementById("monthly");
 let yearlyBtn = document.getElementById("yearly");
