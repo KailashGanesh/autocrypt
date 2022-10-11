@@ -166,11 +166,8 @@ a, a:visited, a:active {
 }
 @media (max-width: 1020px) {
   .feature {
-    width: calc((100% - 30px) / 2);
+    width: calc((100% - 40px) / 2);
     margin: 20px 20px 0px 0px;
-  }
-  .feature:nth-child(even) {
-    margin-right: 0;
   }
 }
 @media (max-width: 767px) {
@@ -544,7 +541,7 @@ a, a:visited, a:active {
   top: 30px;
   left: 250px;
   min-height: 351px;
-  background-image: url(../../../assests/images/green-quote.svg);
+  background-image: url(../../../dist/image.svg#green-quote);
   background-size: auto 325px;
   background-repeat: no-repeat;
 }
