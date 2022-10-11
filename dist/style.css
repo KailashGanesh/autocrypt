@@ -332,6 +332,7 @@ a, a:visited, a:active {
   display: inline-block;
   text-align: start;
   line-height: 2.2;
+  vertical-align: middle;
 }
 @media only screen and (min-width: 1020px) {
   .nav__left {
@@ -343,6 +344,7 @@ a, a:visited, a:active {
   width: 50%;
   text-align: center;
   font-weight: 300;
+  vertical-align: middle;
 }
 .nav__center li {
   font-size: 16px;
@@ -356,6 +358,7 @@ a, a:visited, a:active {
   text-align: end;
   font-size: 16px;
   font-weight: 300;
+  vertical-align: middle;
 }
 @media (max-width: 1020px) {
   .nav__right {
@@ -386,7 +389,7 @@ a, a:visited, a:active {
   z-index: 15;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
   overflow-x: hidden;
   transition: all 0.5s ease-in-out 0s;
   color: white;

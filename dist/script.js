@@ -17,12 +17,12 @@ function closeNav(){
 // == sticky header ==
 
 function changeNavColor(color){
-    let white = "rgb(0,0,0,0.7)"
-    if (color == "white"){
-        header.style.backgroundColor = white;
+    let black = "rgb(0,0,0,0.8)"
+    if (color == "black"){
+        header.style.backgroundColor = black;
         header.style.position = "fixed";
-        header.style.paddingTop = "28px"
-        header.style.paddingBottom = "14px"
+        header.style.paddingTop = "20px"
+        header.style.paddingBottom = "20px"
         console.log("turned white")
     }else{
         header.style.backgroundColor= "transparent";
@@ -38,7 +38,7 @@ let header = document.getElementById("header");
 document.addEventListener('scroll', (e) => {
     lastKnownScrollPosition = window.scrollY;
     if (lastKnownScrollPosition >= 100){
-        changeNavColor("white")
+        changeNavColor("black")
     }else if(lastKnownScrollPosition == 0){
         changeNavColor()
     }
@@ -80,7 +80,7 @@ function openModel(){
     window.setTimeout(function(){
       model.style.opacity = 1;
       model.style.transform = 'scale(1)';
-    },0);
+    },10);
 
     model.style.backdropFilter = "blur(6px)";
 
