@@ -412,6 +412,13 @@ a, a:visited, a:active {
   font-size: 20px;
   margin-top: 30%;
 }
+.overlay__nav li:nth-child(4) {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.overlay__nav li:nth-child(5) {
+  margin-bottom: 10px;
+}
 
 .modelInput {
   position: fixed;
@@ -542,7 +549,7 @@ a, a:visited, a:active {
   top: 30px;
   left: 250px;
   min-height: 351px;
-  background-image: url(../../../dist/image.svg#green-quote);
+  background-image: url("/assests/images/green-quote.svg");
   background-size: auto 325px;
   background-repeat: no-repeat;
 }
