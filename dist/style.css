@@ -424,8 +424,9 @@ a, a:visited, a:active {
   color: black;
   display: none;
   transform: scale(0);
-  transition: 0.3s ease-in-out opacity, 0.3s ease-in-out transform, backdrop-filter 0.3s ease-in-out;
+  transition: 0.3s ease-in-out opacity, 0.3s ease-in-out transform, backdrop-filter 0.3s ease-in-out, background-color 0.3s ease-in-out;
   opacity: 0;
+  background-color: transparent;
 }
 .modelInput__form {
   border-bottom: 1px #1fdb84 solid;

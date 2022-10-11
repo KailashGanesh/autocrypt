@@ -76,13 +76,17 @@ for (let i = 0; i < slides.length; i++){
 
 let model = document.getElementById("modelInput")
 function openModel(){
+    let black = "rgb(0,0,0,0.5)"
     model.style.display = 'block';
     window.setTimeout(function(){
       model.style.opacity = 1;
       model.style.transform = 'scale(1)';
-    },10);
+    },0);
 
-    model.style.backdropFilter = "blur(6px)";
+    window.setTimeout(function(){
+        model.style.backdropFilter = "blur(6px)";
+        model.style.backgroundColor = black;
+    },300);
 
     // prevent  background scroll
     document.documentElement.style.overflow = 'hidden';
@@ -90,9 +94,12 @@ function openModel(){
 }
 
 function closeModel(){
-    model.style.opacity = 0;
+    model.style.backgroundColor = "transparent";
     model.style.backdropFilter = "blur(0px)";
-    model.style.transform = 'scale(0)';
+    window.setTimeout(function(){
+        model.style.transform = 'scale(0)';
+        model.style.opacity = 0;
+    },200);
     window.setTimeout(function(){
       model.style.display = 'none';
     },700); // timed to match animation-duration

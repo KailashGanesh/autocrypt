@@ -12,8 +12,9 @@
     color: black;
     display: none;
     transform: scale(0);
-    transition: .3s ease-in-out opacity,.3s ease-in-out transform, backdrop-filter .3s ease-in-out;
+    transition: .3s ease-in-out opacity,.3s ease-in-out transform, backdrop-filter .3s ease-in-out,background-color .3s ease-in-out;
     opacity: 0;
+    background-color: transparent;
 
     &__form{
         border-bottom: 1px $primary-green solid;
