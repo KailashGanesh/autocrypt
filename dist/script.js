@@ -23,13 +23,11 @@ function changeNavColor(color){
         header.style.position = "fixed";
         header.style.paddingTop = "20px"
         header.style.paddingBottom = "20px"
-        console.log("turned white")
     }else{
         header.style.backgroundColor= "transparent";
         header.style.position = "absolute" ;
         header.style.paddingTop = "20px"
         header.style.paddingBottom = "0px"
-        console.log("turned initial")
     }
 }
 
@@ -59,6 +57,7 @@ new Splide( splide, {
     focus  : 'center',
     arrows: false,
     autowidth: false,
+    waitForTransition: false,
     // updateOnMove: true,
     snap: true,
     breakpoints:{ 470:{ fixedWidth: '90%', } }
@@ -66,11 +65,7 @@ new Splide( splide, {
 
 let slides = document.getElementsByClassName('splide__slide')
 
-console.log(slides)
 
-for (let i = 0; i < slides.length; i++){
-    console.log(slides[i].classList.value)
-}
 
 // == model == 
 
@@ -146,19 +141,48 @@ monthlyBtn.addEventListener('click', () => {
     yearlyBtn.classList.remove('btn--active')
 });
 
-// let cards = document.querySelectorAll('.card');
-// cards[1].classList.add("card--best");
-// for(let i = 0; i < cards.length; i++){
-//     cards[i].addEventListener('mouseover', (e) => {
-//         if(e.target.classList == "card"){
-//             cards[1].classList.remove("card--best");
-//             e.target.classList.add("card--best");
-//         }else{
-//             e.target.parrentElement.add("card--best");
-//         }
-//     })
 
-//     cards[i].addEventListener('mouseout', (e) => {
-//             e.target.classList.remove("card--best");
-//     })
-// }
+// == Carousel ==
+
+let carouselSlides = document.querySelectorAll('.carousel__slide');
+let pageLink = document.querySelectorAll('.page__link');
+const carouselList = document.querySelector('#carouselList')
+let slideWidth = 470;
+slideWidth = carouselSlides[0].offsetWidth + 50;
+
+carouselList.addEventListener('scroll', (e) => {
+    lastKnownScrollPosition = carouselList.scrollLeft;
+    let carouselPos = Math.round(lastKnownScrollPosition / slideWidth);
+    makeActive(carouselPos);
+    console.log(carouselPos);
+});
+
+pageLink.forEach(pageBtn => {
+
+    pageBtn.addEventListener('click', (e) => {
+        let slideNumber = pageBtn.getAttribute('data-slide');
+        carouselList.scrollLeft = slideNumber * slideWidth;
+
+    //     pageLink.forEach( element =>{
+    //         element.classList.remove('page__link--active')
+    //     })
+    //     carouselSlides.forEach(element => {
+    //         element.classList.remove('slide--active')
+    //     })
+
+    //     pageBtn.classList.add('page__link--active')
+    //    carouselSlides[slideNumber].classList.add('slide--active');
+     })
+})
+
+function makeActive(indexNumber){
+    pageLink.forEach( element =>{
+        element.classList.remove('page__link--active')
+    })
+    carouselSlides.forEach(element => {
+        element.classList.remove('slide--active')
+    })
+
+    pageLink[indexNumber].classList.add('page__link--active')
+    carouselSlides[indexNumber].classList.add('slide--active');
+}

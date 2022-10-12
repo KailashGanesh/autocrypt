@@ -1,0 +1,128 @@
+.carousel{
+    margin-top: 50px;
+    background: linear-gradient(90deg, #f8f9fc 40%, #313a5a 40%);
+    padding: 200px 0;
+    position: relative;
+    transition: all 0.3s ease-in-out 0s;
+
+    &__list{
+        overflow: scroll;
+        white-space: nowrap;
+        // position: absolute;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        height: 100%;
+        width: 70%;
+        font-size: 0;
+        margin-left: auto;
+        scroll-snap-type: x mandatory;
+
+        @include for-phone-down{
+            width: 100%;
+        }
+
+        &::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
+    }
+
+    &__slide{
+        display: inline-block;
+        white-space: normal;
+        width:420px;
+        height:500px;
+        padding: 80px 50px 60px 50px;
+        border-radius: 6px;
+        background-color: white;
+        list-style: none;
+        margin-right: 50px;
+        font-size: 16px;
+        vertical-align: middle;
+        scroll-snap-align: start;
+        transition: all 0.3s ease-in-out 0.4s;
+
+        @include for-phone-down{
+            width: 90%;
+        }
+    }
+
+    &__buttons{
+        position: absolute;
+        bottom: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include for-phone-down{
+            left: 60%;
+        }
+    }
+
+    &__slideQuote {
+        margin-bottom: 20px;
+        fill: $primary-green;
+        transition: all 0.3s ease-in-out 0.4s;
+    }
+
+    &__body {
+        font-size: 18px;
+        color: $slate-blue;
+        margin-bottom: 40px;
+        line-height: 2;
+        transition: all 0.3s ease-in-out 0.4s;
+    }
+
+    &__auth {
+        font-size: 18px;
+        color: $marine;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out 0.4s;
+
+        span {
+            font-weight: 300;
+        }
+    }
+
+}
+
+.page__link{
+    display: inline-block;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out 0s;
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    &:hover{
+        background-color: white;
+        @include for-phone-down{
+            background-color: transparent;
+        }
+    }
+
+    &--active{
+        background-color: white;
+    }
+}
+
+.slide--active{
+    background-color: $primary-green;
+
+    // transition: all 0.1s ease-in-out;
+    .carousel__slideQuote {
+        fill: white;
+    }
+
+    .carousel__body {
+        color: white;
+    }
+
+    .carousel__auth {
+        color: white;
+    }
+}
