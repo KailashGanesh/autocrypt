@@ -13,6 +13,13 @@ function closeNav(){
     document.body.scroll = "yes";
 }
 
+function toggleNav(open){
+    document.getElementById("mobile-menu").style.width = open ? "100%":"0";
+    document.getElementById("mobile-menu").style.padding = open ? "0 40px":"0";
+    document.documentElement.style.overflow = open ? "hidden":'scroll';
+    document.body.scroll = open ? 'no':'yes';
+}
+
 
 // == sticky header ==
 
@@ -121,22 +128,26 @@ showPassword.addEventListener('click', () => {
 
 // == prices ==
 
-let monthlyBtn = document.getElementById("monthly");
-let yearlyBtn = document.getElementById("yearly");
-let yearlyCards = document.getElementById("yearlyCards");
-let monthlyCards = document.getElementById("monthlyCards");
+const monthlyBtn = document.getElementById("monthly");
+const yearlyBtn = document.getElementById("yearly");
+const price1 = document.getElementById("cardPrice1");
+const price2 = document.getElementById("cardPrice2");
+const price3 = document.getElementById("cardPrice3");
+
+function switchPrices(isYearly){
+    price1.innerText = isYearly ? "$96":"$10";
+    price2.innerText = isYearly ? "$270":"$29";
+    price3.innerText = isYearly ? "$350":"$49";
+}
 
 yearlyBtn.addEventListener('click', () => {
-    yearlyCards.style.display = "block";
-    yearlyCards.style.textAlign = "center";
-    monthlyCards.style.display = "none";
+    switchPrices(isYearly = true)
     yearlyBtn.classList.add('btn--active')
     monthlyBtn.classList.remove('btn--active')
 
 });
 monthlyBtn.addEventListener('click', () => {
-    yearlyCards.style.display = "none";
-    monthlyCards.style.display = "block";
+    switchPrices(isYearly = false)
     monthlyBtn.classList.add('btn--active')
     yearlyBtn.classList.remove('btn--active')
 });
@@ -144,17 +155,15 @@ monthlyBtn.addEventListener('click', () => {
 
 // == Carousel ==
 
-let carouselSlides = document.querySelectorAll('.carousel__slide');
-let pageLink = document.querySelectorAll('.page__link');
+const carouselSlides = document.querySelectorAll('.carousel__slide');
+const pageLink = document.querySelectorAll('.page__link');
 const carouselList = document.querySelector('#carouselList')
-let slideWidth = 470;
-slideWidth = carouselSlides[0].offsetWidth + 50;
+let slideWidth = carouselSlides[0].offsetWidth + 50;
 
 carouselList.addEventListener('scroll', (e) => {
     lastKnownScrollPosition = carouselList.scrollLeft;
     let carouselPos = Math.round(lastKnownScrollPosition / slideWidth);
     makeActive(carouselPos);
-    console.log(carouselPos);
 });
 
 pageLink.forEach(pageBtn => {
@@ -182,8 +191,6 @@ function makeActive(indexNumber){
     carouselSlides.forEach(element => {
         element.classList.remove('slide--active')
     })
-    console.log(indexNumber)
-    console.log(carouselSlides)
     carouselSlides[indexNumber].classList.add('slide--active');
     pageLink[indexNumber].classList.add('page__link--active')
 }
