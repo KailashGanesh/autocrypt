@@ -1,44 +1,32 @@
 // == mobile nav ==
-function openNav(){
-    document.getElementById("mobile-menu").style.width = "100%";
-    document.getElementById("mobile-menu").style.padding = "0 40px";
-    document.documentElement.style.overflow = 'hidden';
-    document.body.scroll = "no";
-}
-
-function closeNav(){
-    document.getElementById("mobile-menu").style.width = "0";
-    document.getElementById("mobile-menu").style.padding = "0";
-    document.documentElement.style.overflow = 'scroll';
-    document.body.scroll = "yes";
-}
 
 function toggleNav(open){
-    document.getElementById("mobile-menu").style.width = open ? "100%":"0";
-    document.getElementById("mobile-menu").style.padding = open ? "0 40px":"0";
-    document.documentElement.style.overflow = open ? "hidden":'scroll';
+    const mobileMenu = document.getElementById("mobile-menu");
+    mobileMenu.style.width = open ? "100%":"0";
+    mobileMenu.style.padding = open ? "0 40px":"0";
     document.body.scroll = open ? 'no':'yes';
+}
+
+// function to prevent background scrolling
+
+function toggleScroll(allowScroll){
+    document.body.style.overflow = allowScroll ? 'scroll' : 'hidden';
+    document.body.scroll = allowScroll ? 'yes':'no';
 }
 
 
 // == sticky header ==
 
+let header = document.getElementById("header");
+
 function changeNavColor(color){
     let black = "rgb(0,0,0,0.8)"
     if (color == "black"){
-        header.style.backgroundColor = black;
-        header.style.position = "fixed";
-        header.style.paddingTop = "20px"
-        header.style.paddingBottom = "20px"
+        header.classList.add('header--sticky');
     }else{
-        header.style.backgroundColor= "transparent";
-        header.style.position = "absolute" ;
-        header.style.paddingTop = "20px"
-        header.style.paddingBottom = "0px"
+        header.classList.remove('header--sticky');
     }
 }
-
-let header = document.getElementById("header");
 
 document.addEventListener('scroll', (e) => {
     lastKnownScrollPosition = window.scrollY;
@@ -70,8 +58,6 @@ new Splide( splide, {
     breakpoints:{ 470:{ fixedWidth: '90%', } }
   } ).mount();
 
-let slides = document.getElementsByClassName('splide__slide')
-
 
 
 // == model == 
@@ -91,8 +77,7 @@ function openModel(){
     },300);
 
     // prevent  background scroll
-    document.documentElement.style.overflow = 'hidden';
-    document.body.scroll = 'no';
+    toggleScroll(allowScroll = false);
 }
 
 function closeModel(){
@@ -105,8 +90,8 @@ function closeModel(){
     window.setTimeout(function(){
       model.style.display = 'none';
     },700); // timed to match animation-duration
-    document.documentElement.style.overflow = 'scroll';
-    document.body.scroll = 'yes';
+
+    toggleScroll(allowScroll = true);
 }
 
 // show password btn

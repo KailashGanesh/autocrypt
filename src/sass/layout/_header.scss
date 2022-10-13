@@ -1,13 +1,5 @@
 /* header */
 
-
-// .clear-fix::after{
-//     content: '';
-//     clear: both;
-//     display: table;
-// }
-
-
 .header{
     position: absolute;
     top: 0;
@@ -25,6 +17,13 @@
     &__logo{
         font-size: 26px;
         color: white;
+    }
+
+    &--sticky{
+        background-color: rgb(0,0,0,0.8);
+        position: fixed;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 }
 
@@ -103,13 +102,3 @@
     fill: $primary-green;
     }
 }
-
-// // tablet and above
-// @media only screen and (min-width: 768px) {
-//     .nav__left{
-//         width: 20%;
-//     }
-//     .nav__right{
-//         width: 30%;
-//     }
-// }

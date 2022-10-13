@@ -40,7 +40,7 @@
 
             <ul class="nav__right desktop-hide">
                 <li>
-                    <a href="#0" onclick="openNav()">
+                    <a href="#0" onclick="toggleNav(open=true)">
                         <svg class="hamburger">
                             <use xlink:href="./dist/image.svg#icon-menu"></use>
                         </svg>
@@ -366,16 +366,16 @@
 
     <div class="overlay" id="mobile-menu">
         <div class="overlay__closeBtn">
-            <a onclick="closeNav()" class="link">&times;</a>
+            <a onclick="toggleNav(open=false)" class="link">&times;</a>
         </div>
         <ul class="overlay__nav">
-            <li><a href="#benefit" onclick="closeNav()" class="link">Benefit</a></li>
-            <li><a href="#pricing" onclick="closeNav()" class="link">Pricing</a></li>
-            <li><a href="#splide" onclick="closeNav()" class="link">Testimonials</a></li>
+            <li><a href="#benefit" onclick="toggleNav(open=false)" class="link">Benefit</a></li>
+            <li><a href="#pricing" onclick="toggleNav(open=false)" class="link">Pricing</a></li>
+            <li><a href="#splide" onclick="toggleNav(open=false)" class="link">Testimonials</a></li>
             <li class="border-bottom"><a href="#client" onclick="closeNav()" class="link">Client</a></li>
             <!-- <hr /> -->
-            <li><a href="#0" onclick="closeNav()" class="link">Login</a></li>
-            <li><a href="#0" onclick="closeNav(); openModel()" class="btn btn--sm">Register</a></li>
+            <li><a href="#0" onclick="toggleNav(open=false)" class="link">Login</a></li>
+            <li><a href="#0" onclick="toggleNav(open=false); openModel()" class="btn btn--sm">Register</a></li>
         </ul>
     </div>
 
