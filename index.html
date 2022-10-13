@@ -388,15 +388,15 @@
             <p class="modelInput__smallText">register in 1 minute</p>
             <form action="/autocrypt/" class="modelInput__form">
                 <div class="field">
-                    <input class="field__input" type="text" placeholder="Enter your name" required>
+                    <input class="field__input" type="text" placeholder="Enter your name" minlength="3" required id="name-input" autocomplete="off">
                     <label for="Name" class="field__label">Name</label>
                 </div>
                 <div class="field">
-                    <input class="field__input" type="email" placeholder="eg. bob@gmail.com" required>
+                    <input class="field__input" type="email" placeholder="eg. bob@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required id="email-input" autocomplete="off">
                     <label for="email" class="field__label">Email</label>
                 </div>
                 <div class="field field--password">
-                    <input class="field__input" type="password" placeholder="Enter your password" required id="passwordField">
+                    <input class="field__input" type="password" placeholder="Enter your password" minlength="5" required id="passwordField" autocomplete="off">
                     <label for="password" class="field__label">Password</label>
                     <svg class="field__showPassword" id="showPassword">
                         <use xlink:href="./dist/image.svg#eye-solid" width="20" height="20" id="showPasswordIcon"></use>

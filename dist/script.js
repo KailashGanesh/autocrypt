@@ -94,21 +94,6 @@ function closeModel(){
     toggleScroll(allowScroll = true);
 }
 
-// show password btn
-
-let showPassword = document.getElementById('showPassword');
-let passwordInput = document.getElementById('passwordField')
-let passwordInputIcon = document.getElementById('showPasswordIcon')
-
-showPassword.addEventListener('click', () => {
-    if (passwordInput.type == "password"){
-        passwordInput.type ='text';
-        passwordInputIcon.setAttribute('xlink:href', "./dist/image.svg#eye-slash-solid")
-    }else{
-        passwordInput.type ='password';
-        passwordInputIcon.setAttribute('xlink:href', "./dist/image.svg#eye-solid")
-    }
-});
 
 
 // == prices ==
@@ -179,3 +164,59 @@ function makeActive(indexNumber){
     carouselSlides[indexNumber].classList.add('slide--active');
     pageLink[indexNumber].classList.add('page__link--active')
 }
+
+// form validation 
+
+const nameInput = document.getElementById("name-input");
+const emailInput = document.getElementById("email-input");
+const passwordInput = document.getElementById('passwordField')
+
+nameInput.addEventListener("input", (event) => {
+    console.log(nameInput.validity.tooShort);
+    if (nameInput.validity.tooShort){
+        nameInput.setCustomValidity("Name should be longer then 2 letters");
+        nameInput.style.borderColor = "tomato";
+        nameInput.reportValidity();
+    }else{
+        nameInput.style.borderColor = "#1fdb84";
+        nameInput.setCustomValidity("");
+    }
+});
+
+emailInput.addEventListener("input", (event) => {
+  if (emailInput.validity.patternMismatch) {
+    emailInput.style.borderColor = "tomato";
+    emailInput.setCustomValidity("you have entered an invalid email - eg. bob@gmail.com");
+    emailInput.reportValidity();
+  } else {
+    emailInput.style.borderColor = "#1fdb84";
+    emailInput.setCustomValidity("");
+  }
+});
+
+passwordInput.addEventListener("input", (event) => {
+    console.log(passwordInput.validity.tooShort);
+    if (passwordInput.validity.tooShort){
+        passwordInput.setCustomValidity("Password should be longer then 4 letters");
+        passwordInput.style.borderColor = "tomato";
+        passwordInput.reportValidity();
+    }else{
+        passwordInput.style.borderColor = "#1fdb84";
+        passwordInput.setCustomValidity("");
+    }
+});
+
+// show password btn
+
+const showPassword = document.getElementById('showPassword');
+const passwordInputIcon = document.getElementById('showPasswordIcon')
+
+showPassword.addEventListener('click', () => {
+    if (passwordInput.type == "password"){
+        passwordInput.type ='text';
+        passwordInputIcon.setAttribute('xlink:href', "./dist/image.svg#eye-slash-solid")
+    }else{
+        passwordInput.type ='password';
+        passwordInputIcon.setAttribute('xlink:href', "./dist/image.svg#eye-solid")
+    }
+});

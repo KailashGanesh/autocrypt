@@ -285,9 +285,6 @@ a, a:visited, a:active {
 .field__input::placeholder {
   color: transparent;
 }
-.field__input:invalid {
-  border-color: tomato;
-}
 .field__label {
   position: absolute;
   left: 1rem;
