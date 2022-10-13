@@ -84,6 +84,7 @@ a, a:visited, a:active {
 }
 .btn-group .btn:hover {
   background-color: rgb(217, 249, 224);
+  background-color: white;
 }
 @media (max-width: 767px) {
   .btn-group .btn {
@@ -549,7 +550,7 @@ a, a:visited, a:active {
   top: 30px;
   left: 250px;
   min-height: 351px;
-  background-image: url("/assests/images/green-quote.svg");
+  background-image: url("/autocrypt/assests/images/green-quote.svg");
   background-size: auto 325px;
   background-repeat: no-repeat;
 }
@@ -666,7 +667,7 @@ a, a:visited, a:active {
   top: 30px;
   left: 212px;
   min-height: 351px;
-  background-image: url("/assests/images/green-quote.svg");
+  background-image: url("/autocrypt/assests/images/green-quote.svg");
   background-size: auto 325px;
   background-repeat: no-repeat;
 }
