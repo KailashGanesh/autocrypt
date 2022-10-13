@@ -49,6 +49,7 @@
 
         &:hover{
             background-color:rgb(217, 249, 224);
+            background-color:white;
         }
 
         @include for-phone-down{
