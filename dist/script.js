@@ -4,7 +4,7 @@ function toggleNav(open){
     const mobileMenu = document.getElementById("mobile-menu");
     mobileMenu.style.width = open ? "100%":"0";
     mobileMenu.style.padding = open ? "0 40px":"0";
-    document.body.scroll = open ? 'no':'yes';
+    toggleScroll(allowScroll = open ? false:true);
 }
 
 // function to prevent background scrolling
