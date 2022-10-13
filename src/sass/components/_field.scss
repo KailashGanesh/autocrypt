@@ -37,6 +37,9 @@
             color: transparent;
         }
 
+        &:invalid {
+            border-color: tomato;
+        }
     }
 
     &__label{

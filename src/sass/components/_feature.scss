@@ -14,10 +14,6 @@
     @include for-tablet-portrait-down{
         width: calc((100% - 40px)/2);
         margin: 20px 20px 0px 0px;
-
-        // &:nth-child(even){
-        //     margin-right: 0;
-        // }
     }
 
     @include for-phone-down{
@@ -31,7 +27,6 @@
 
 
     &__svgBox{
-        // opacity: 0.1;
         background-color: rgba(31, 219, 132,0.1);
         padding: 20px 16px;
         display: inline-block;

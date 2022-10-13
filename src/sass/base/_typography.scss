@@ -15,18 +15,25 @@ a, a:visited, a:active{
 .heading{
     &--lg{
         font-size: 48px;
+        line-height: normal;
     }
 
     &--md{
         font-size: 40px;
+        line-height: normal;
     }
 
     &--sm{
         font-size: 24px;
+        line-height: normal;
     }
 }
 
 .body-text{
     font-size: 16px;
     line-height: 2;
+
+    &--18{
+        font-size: 18px;
+    }
 }
