@@ -49,7 +49,7 @@ new Splide( splide, {
     fixedHeight : '500px',
     gap: '40px',
     perPage: 1,
-    focus  : 'center',
+    // focus  : 'center',
     arrows: false,
     autowidth: false,
     waitForTransition: false,

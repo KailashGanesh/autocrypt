@@ -3,10 +3,15 @@
     padding: 200px 0;
     position: relative;
 
+    &__track{
+        width: 70%;
+        margin-left: auto;
+    }
     &__quote {
         position: absolute;
         top: 30px;
-        left: 250px;
+        // left: 250px;
+        left: 212px;
         min-height: 351px;
         background-image: url('/autocrypt/assests/images/green-quote.svg');
         // background-image: url('/dist/image.svg#green-quote');
@@ -88,10 +93,10 @@
     }
 }
 
-.splide__slide,
-.is-prev {
-    visibility: hidden;
-}
+// .splide__slide,
+// .is-prev {
+//     visibility: hidden;
+// }
 
 .is-active,
 .is-next,

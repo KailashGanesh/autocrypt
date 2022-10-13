@@ -587,10 +587,14 @@ a, a:visited, a:active {
   padding: 200px 0;
   position: relative;
 }
+.splide__track {
+  width: 70%;
+  margin-left: auto;
+}
 .splide__quote {
   position: absolute;
   top: 30px;
-  left: 250px;
+  left: 212px;
   min-height: 351px;
   background-image: url("/autocrypt/assests/images/green-quote.svg");
   background-size: auto 325px;
@@ -656,11 +660,6 @@ a, a:visited, a:active {
 }
 .is-active .is-active .splide__auth {
   color: white;
-}
-
-.splide__slide,
-.is-prev {
-  visibility: hidden;
 }
 
 .is-active,
@@ -841,6 +840,7 @@ a, a:visited, a:active {
 
 .slide--active {
   background-color: #1fdb84;
+  box-shadow: 3px 5px 17px 0px rgba(31, 219, 132, 0.5);
 }
 .slide--active .carousel__slideQuote {
   fill: white;

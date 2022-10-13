@@ -153,6 +153,7 @@
 
 .slide--active{
     background-color: $primary-green;
+    box-shadow: 3px 5px 17px 0px rgb(31 219 132 / 50%);
 
     // transition: all 0.1s ease-in-out;
     .carousel__slideQuote {
