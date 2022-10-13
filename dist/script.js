@@ -182,7 +182,8 @@ function makeActive(indexNumber){
     carouselSlides.forEach(element => {
         element.classList.remove('slide--active')
     })
-
-    pageLink[indexNumber].classList.add('page__link--active')
+    console.log(indexNumber)
+    console.log(carouselSlides)
     carouselSlides[indexNumber].classList.add('slide--active');
+    pageLink[indexNumber].classList.add('page__link--active')
 }

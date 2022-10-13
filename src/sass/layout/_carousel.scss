@@ -5,6 +5,44 @@
     position: relative;
     transition: all 0.3s ease-in-out 0s;
 
+    &__quote {
+        position: absolute;
+        top: 30px;
+        // left: 250px;
+        left: 212px;
+        min-height: 351px;
+        background-image: url('/assests/images/green-quote.svg');
+        // background-image: url('/dist/image.svg#green-quote');
+        background-size: auto 325px;
+        background-repeat: no-repeat;
+
+        @include for-tablet-portrait-down {
+            width: 50%;
+            height: auto;
+            left: 20px;
+            background-size: auto 80%;
+        }
+
+        @include for-phone-down {
+            background-size: auto 40%;
+        }
+
+    }
+
+    &__heading {
+        max-width: 12ch;
+        margin: 40px 0 0 10px;
+
+        @include for-tablet-portrait-down {
+            font-size: 30px;
+        }
+
+        @include for-phone-down {
+            font-size: 20px;
+            margin-left: 5px;
+        }
+    }
+
     &__list{
         overflow: scroll;
         white-space: nowrap;
@@ -42,6 +80,9 @@
         vertical-align: middle;
         scroll-snap-align: start;
         transition: all 0.3s ease-in-out 0.4s;
+        &:nth-child(6), &:nth-child(7){
+            visibility: hidden;
+        }
 
         @include for-phone-down{
             width: 90%;

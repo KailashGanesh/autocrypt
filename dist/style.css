@@ -549,7 +549,7 @@ a, a:visited, a:active {
   top: 30px;
   left: 250px;
   min-height: 351px;
-  background-image: url("/dist/image.svg#green-quote");
+  background-image: url("/assests/images/green-quote.svg");
   background-size: auto 325px;
   background-repeat: no-repeat;
 }
@@ -661,6 +661,43 @@ a, a:visited, a:active {
   position: relative;
   transition: all 0.3s ease-in-out 0s;
 }
+.carousel__quote {
+  position: absolute;
+  top: 30px;
+  left: 212px;
+  min-height: 351px;
+  background-image: url("/assests/images/green-quote.svg");
+  background-size: auto 325px;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1020px) {
+  .carousel__quote {
+    width: 50%;
+    height: auto;
+    left: 20px;
+    background-size: auto 80%;
+  }
+}
+@media (max-width: 767px) {
+  .carousel__quote {
+    background-size: auto 40%;
+  }
+}
+.carousel__heading {
+  max-width: 12ch;
+  margin: 40px 0 0 10px;
+}
+@media (max-width: 1020px) {
+  .carousel__heading {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .carousel__heading {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+}
 .carousel__list {
   overflow: scroll;
   white-space: nowrap;
@@ -696,6 +733,9 @@ a, a:visited, a:active {
   vertical-align: middle;
   scroll-snap-align: start;
   transition: all 0.3s ease-in-out 0.4s;
+}
+.carousel__slide:nth-child(6), .carousel__slide:nth-child(7) {
+  visibility: hidden;
 }
 @media (max-width: 767px) {
   .carousel__slide {
