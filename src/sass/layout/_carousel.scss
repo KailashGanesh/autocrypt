@@ -57,7 +57,7 @@
         scroll-snap-type: x mandatory;
 
         @include for-phone-down{
-            width: 100%;
+            width: 90%;
         }
 
         &::-webkit-scrollbar{
@@ -85,7 +85,8 @@
         }
 
         @include for-phone-down{
-            width: 90%;
+            width: calc(100% - 50px);
+            scroll-snap-align: center;
         }
     }
 
@@ -140,9 +141,8 @@
     }
 
     &:hover{
-        background-color: white;
-        @include for-phone-down{
-            background-color: transparent;
+        @include tablet-up{
+            background-color: white;
         }
     }
 
