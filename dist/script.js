@@ -55,7 +55,7 @@ new Splide( splide, {
     waitForTransition: false,
     // updateOnMove: true,
     snap: true,
-    breakpoints:{ 470:{ fixedWidth: '90%', } }
+    breakpoints:{ 470:{ fixedWidth: '90%',fixedHeight: '400px', } }
   } ).mount();
 
 
@@ -128,7 +128,7 @@ monthlyBtn.addEventListener('click', () => {
 const carouselSlides = document.querySelectorAll('.carousel__slide');
 const pageLink = document.querySelectorAll('.page__link');
 const carouselList = document.querySelector('#carouselList')
-let slideWidth = carouselSlides[0].offsetWidth + 50;
+let slideWidth = carouselSlides[0].offsetWidth + 40;
 
 carouselList.addEventListener('scroll', (e) => {
     lastKnownScrollPosition = carouselList.scrollLeft;

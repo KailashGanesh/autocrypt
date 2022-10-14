@@ -591,6 +591,11 @@ a, a:visited, a:active {
   width: 70%;
   margin-left: auto;
 }
+@media (max-width: 767px) {
+  .splide__track {
+    width: 90%;
+  }
+}
 .splide__quote {
   position: absolute;
   top: 30px;
@@ -633,6 +638,13 @@ a, a:visited, a:active {
   border-radius: 6px;
   padding: 80px 50px 60px 50px;
 }
+@media (max-width: 767px) {
+  .splide__slide {
+    scroll-snap-align: center;
+    padding: 50px 20px 50px 20px;
+    height: 400px;
+  }
+}
 .splide__slideQuote {
   margin-bottom: 20px;
   fill: #1fdb84;
@@ -643,10 +655,20 @@ a, a:visited, a:active {
   margin-bottom: 40px;
   line-height: 2;
 }
+@media (max-width: 767px) {
+  .splide__body {
+    font-size: 14px;
+  }
+}
 .splide__auth {
   font-size: 18px;
   color: #031d5b;
   font-weight: 500;
+}
+@media (max-width: 767px) {
+  .splide__auth {
+    font-size: 14px;
+  }
 }
 .splide__auth span {
   font-weight: 300;
@@ -688,6 +710,11 @@ a, a:visited, a:active {
 
 .splide__pagination {
   bottom: 5.5em;
+}
+@media (max-width: 767px) {
+  .splide__pagination {
+    left: 40px;
+  }
 }
 
 .splide__pagination__page {
@@ -770,7 +797,7 @@ a, a:visited, a:active {
   border-radius: 6px;
   background-color: white;
   list-style: none;
-  margin-right: 50px;
+  margin-right: 40px;
   font-size: 16px;
   vertical-align: middle;
   scroll-snap-align: start;
@@ -781,8 +808,10 @@ a, a:visited, a:active {
 }
 @media (max-width: 767px) {
   .carousel__slide {
-    width: calc(100% - 50px);
+    width: calc(100% - 40px);
     scroll-snap-align: center;
+    padding: 50px 20px 50px 20px;
+    height: 400px;
   }
 }
 .carousel__buttons {
@@ -808,11 +837,21 @@ a, a:visited, a:active {
   line-height: 2;
   transition: all 0.3s ease-in-out 0.4s;
 }
+@media (max-width: 767px) {
+  .carousel__body {
+    font-size: 14px;
+  }
+}
 .carousel__auth {
   font-size: 18px;
   color: #031d5b;
   font-weight: 500;
   transition: all 0.3s ease-in-out 0.4s;
+}
+@media (max-width: 767px) {
+  .carousel__auth {
+    font-size: 14px;
+  }
 }
 .carousel__auth span {
   font-weight: 300;
@@ -823,7 +862,7 @@ a, a:visited, a:active {
   padding: 5px;
   border: 2px solid white;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 5px;
   transition: all 0.3s ease-in-out 0s;
 }
 .page__link:last-child {
