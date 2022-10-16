@@ -80,6 +80,7 @@
         vertical-align: middle;
         scroll-snap-align: start;
         transition: all 0.3s ease-in-out 0.4s;
+        transition: background-color 0.3s ease-in-out 0.4s;
         &:nth-child(6), &:nth-child(7){
             visibility: hidden;
         }
@@ -107,7 +108,8 @@
     &__slideQuote {
         margin-bottom: 20px;
         fill: $primary-green;
-        transition: all 0.3s ease-in-out 0.4s;
+        // transition: all 0.3s ease-in-out 0.4s;
+        transition: fill 0.3s ease-in-out 0.4s;
     }
 
     &__body {
@@ -115,7 +117,8 @@
         color: $slate-blue;
         margin-bottom: 40px;
         line-height: 2;
-        transition: all 0.3s ease-in-out 0.4s;
+        // transition: all 0.3s ease-in-out 0.4s;
+        transition: color 0.3s ease-in-out 0.4s;
         @include for-phone-down{
             font-size: 14px;
         }
@@ -125,7 +128,8 @@
         font-size: 18px;
         color: $marine;
         font-weight: $font-medium;
-        transition: all 0.3s ease-in-out 0.4s;
+        // transition: all 0.3s ease-in-out 0.4s;
+        transition: color 0.3s ease-in-out 0.4s;
 
         @include for-phone-down{
             font-size: 14px;

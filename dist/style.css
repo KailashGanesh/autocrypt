@@ -637,6 +637,7 @@ a, a:visited, a:active {
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 6px;
   padding: 80px 50px 60px 50px;
+  transition: background-color 0.3s ease-in-out 0s;
 }
 @media (max-width: 767px) {
   .splide__slide {
@@ -648,12 +649,14 @@ a, a:visited, a:active {
 .splide__slideQuote {
   margin-bottom: 20px;
   fill: #1fdb84;
+  transition: fill 0.3s ease-in-out 0s;
 }
 .splide__body {
   font-size: 18px;
   color: #5b6c94;
   margin-bottom: 40px;
   line-height: 2;
+  transition: color 0.3s ease-in-out 0s;
 }
 @media (max-width: 767px) {
   .splide__body {
@@ -664,6 +667,7 @@ a, a:visited, a:active {
   font-size: 18px;
   color: #031d5b;
   font-weight: 500;
+  transition: color 0.3s ease-in-out 0s;
 }
 @media (max-width: 767px) {
   .splide__auth {
@@ -802,6 +806,7 @@ a, a:visited, a:active {
   vertical-align: middle;
   scroll-snap-align: start;
   transition: all 0.3s ease-in-out 0.4s;
+  transition: background-color 0.3s ease-in-out 0.4s;
 }
 .carousel__slide:nth-child(6), .carousel__slide:nth-child(7) {
   visibility: hidden;
@@ -828,14 +833,14 @@ a, a:visited, a:active {
 .carousel__slideQuote {
   margin-bottom: 20px;
   fill: #1fdb84;
-  transition: all 0.3s ease-in-out 0.4s;
+  transition: fill 0.3s ease-in-out 0.4s;
 }
 .carousel__body {
   font-size: 18px;
   color: #5b6c94;
   margin-bottom: 40px;
   line-height: 2;
-  transition: all 0.3s ease-in-out 0.4s;
+  transition: color 0.3s ease-in-out 0.4s;
 }
 @media (max-width: 767px) {
   .carousel__body {
@@ -846,7 +851,7 @@ a, a:visited, a:active {
   font-size: 18px;
   color: #031d5b;
   font-weight: 500;
-  transition: all 0.3s ease-in-out 0.4s;
+  transition: color 0.3s ease-in-out 0.4s;
 }
 @media (max-width: 767px) {
   .carousel__auth {
@@ -985,6 +990,12 @@ a, a:visited, a:active {
 
 .border-bottom {
   border-bottom: 1px solid #1fdb84;
+}
+
+.clear-fix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /*# sourceMappingURL=style.css.map */

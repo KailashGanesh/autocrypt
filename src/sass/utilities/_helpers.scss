@@ -36,3 +36,9 @@
 .border-bottom{
     border-bottom: 1px solid $primary-green;
 }
+
+.clear-fix::after{
+    content: '';
+    clear: both;
+    display: table;
+}
