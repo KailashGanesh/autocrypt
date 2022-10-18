@@ -1,16 +1,17 @@
+
+
 // == mobile nav ==
 
+const mobileMenu = document.getElementById("mobile-menu");
 function toggleNav(open){
-    const mobileMenu = document.getElementById("mobile-menu");
-    mobileMenu.style.width = open ? "100%":"0";
-    mobileMenu.style.padding = open ? "0 40px":"0";
+    mobileMenu.classList.toggle('overlay__nav--active');
     toggleScroll(allowScroll = open ? false:true);
 }
 
 // function to prevent background scrolling
-
 function toggleScroll(allowScroll){
     document.body.style.overflow = allowScroll ? 'scroll' : 'hidden';
+    // document.body.classList.toggle('no-scroll');
     document.body.scroll = allowScroll ? 'yes':'no';
 }
 
@@ -19,21 +20,13 @@ function toggleScroll(allowScroll){
 
 let header = document.getElementById("header");
 
-function changeNavColor(color){
-    let black = "rgb(0,0,0,0.8)"
-    if (color == "black"){
-        header.classList.add('header--sticky');
-    }else{
-        header.classList.remove('header--sticky');
-    }
-}
 
 document.addEventListener('scroll', (e) => {
     lastKnownScrollPosition = window.scrollY;
     if (lastKnownScrollPosition >= 100){
-        changeNavColor("black")
+        header.classList.add('header--sticky');
     }else if(lastKnownScrollPosition == 0){
-        changeNavColor()
+        header.classList.remove('header--sticky');
     }
 })
 
@@ -65,15 +58,14 @@ new Splide( splide, {
 let model = document.getElementById("modelInput")
 function openModel(){
     let black = "rgb(0,0,0,0.5)"
-    model.style.display = 'block';
+    // model.style.display = 'block';
+    model.classList.add('model-shown');
     window.setTimeout(function(){
-      model.style.opacity = 1;
-      model.style.transform = 'scale(1)';
+      model.classList.add('model-animate');
     },0);
 
     window.setTimeout(function(){
-        model.style.backdropFilter = "blur(6px)";
-        model.style.backgroundColor = black;
+        model.classList.add('model-background');
     },300);
 
     // prevent  background scroll
@@ -81,14 +73,12 @@ function openModel(){
 }
 
 function closeModel(){
-    model.style.backgroundColor = "transparent";
-    model.style.backdropFilter = "blur(0px)";
+    model.classList.remove('model-background');
     window.setTimeout(function(){
-        model.style.transform = 'scale(0)';
-        model.style.opacity = 0;
+        model.classList.remove('model-animate');
     },200);
     window.setTimeout(function(){
-      model.style.display = 'none';
+        model.classList.remove('model-shown');
     },700); // timed to match animation-duration
 
     toggleScroll(allowScroll = true);
