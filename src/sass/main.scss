@@ -21,6 +21,7 @@
 @import 'components/field';
 
 // layout
+@import 'layout/grid';
 @import 'layout/header';
 @import 'layout/mobileNavOverlay';
 @import 'layout/modelInput';
@@ -28,7 +29,6 @@
 @import 'layout/carousel';
 @import 'layout/footer';
 
-@import 'layout/grid';
 
 //pages
 @import 'webpages/homepage';

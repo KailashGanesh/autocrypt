@@ -11,3 +11,32 @@ h1, h2, h3, .heading {
 a, a:visited, a:active{
     text-decoration: none;
 }
+
+.heading{
+    font-weight: $font-bold;
+
+    &--lg{
+        font-size: 48px;
+        line-height: normal;
+    }
+
+    &--md{
+        font-size: 40px;
+        line-height: normal;
+    }
+
+    &--sm{
+        font-size: 24px;
+        line-height: normal;
+    }
+}
+
+
+// font size eg. 'font-sm'
+@include font-size('sm', 16px, 2);
+@include font-size('lg', 18px, 2);
+
+// font color eg. 'color-white'
+@include font-color('white',#ffffff);
+@include font-color('slate-blue',$slate-blue);
+@include font-color('marine',$marine);
