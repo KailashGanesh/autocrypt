@@ -7,47 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autocryp</title>
 
-    <link rel="shortcut icon" type="image/jpg" href="favicon.svg"/>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js" defer></script>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide-core.min.css"> -->
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
     <link rel="stylesheet" href="./dist/style.css">
-    <script src="./dist/script.js" defer></script>
 </head>
 
 <body>
     <header class="header" id="header">
         <nav class="nav container">
             <!-- autocryp -->
-            <ul class="nav__left">
-                <li>
-                    <a href="javascript:void(0)">
-                        <h3 class="header__logo">autocryp</h3>
-                    </a>
-                </li>
-            </ul>
+            <a href="javascript:void(0)" class="nav__left">
+                <span class="heading heading--sm header__logo">autocryp</span>
+            </a>
 
             <ul class="nav__center mobile-hide">
-                <li><a href="#benefit" class="nav__link">Benefit</a></li>
-                <li><a href="#pricing" class="nav__link">Pricing</a></li>
-                <li><a href="#splide" class="nav__link">Testimonials</a></li>
-                <li><a href="#client" class="nav__link">Client</a></li>
+                <li><a href="javascript:void(0)" class="nav__link">Benefit</a></li>
+                <li><a href="javascript:void(0)" class="nav__link">Pricing</a></li>
+                <li><a href="javascript:void(0)" class="nav__link">Testimonials</a></li>
+                <li><a href="javascript:void(0)" class="nav__link">Client</a></li>
             </ul>
 
             <ul class="nav__right mobile-hide">
                 <li><a href="javascript:void(0)" class="nav__link">Login</a></li>
-                <li><a  class="btn btn--sm" onclick="openModel()">Register</a></li>
+                <li><button class="btn btn--sm" onclick="openModel()">Register</button></li>
             </ul>
 
-            <ul class="nav__right desktop-hide">
-                <li>
-                    <a href="javascript:void(0)" onclick="toggleNav(open=true)">
-                        <svg class="hamburger">
-                            <use xlink:href="./dist/image.svg#icon-menu"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
+            <a href="javascript:void(0)" onclick="toggleNav(open=true)" class="nav__right desktop-hide">
+                <svg class="hamburger">
+                    <use xlink:href="./dist/image.svg#icon-menu"></use>
+                </svg>
+            </a>
 
         </nav>
     </header>
@@ -56,20 +45,21 @@
 
     <main>
         <section class="hero">
-            <div class="container clear-fix">
-                <div class="col">
+            <div class="container row">
+                <div class="col-2-m-0 va-top">
                     <article class="hero__content">
-                        <h1 class="heading--lg hero__heading">Easiest way to
+                        <h1 class="heading--lg hero__heading color-white m-b-10">Easiest way to
                             mining your bitcoin</h1>
-                        <p class="body-text hero__body">Autocryp is the place to buy and sell Bitcoin, Ethereum and
+                        <p class="font-sm hero__body color-white m-b-10">Autocryp is the place to buy and sell Bitcoin,
+                            Ethereum and
                             various kinds of Digital Assets in Indonesia. Then, book your weekly, bi-weekly or
                             one-off clean online with imminent confirmation.</p>
-                        <a href="javascript:void(0)" class="btn btn--lg" onclick="openModel()">Get Started</a>
+                        <a href="javascript:void(0)" class="btn btn--lg" id="getStartedButton">Get Started</a>
                     </article>
                 </div>
 
-                <div class="col hero__imgCon mobile-hide">
-                    <div class="hero__image">
+                <div class="col-2-m-0 va-top ta-r mobile-hide">
+                    <div class="hero__image m-l-auto">
                         <img src="./assests/images/phone-hand-optimized.webp" alt="hand and iphone" class="img-fluid">
                     </div>
                 </div>
@@ -77,174 +67,199 @@
         </section>
 
         <section class="features" id="benefit">
-            <div class="container--lg features__container">
-                <div class="container--sm">
+            <div class="container--lg p-t-12 p-b-12">
 
-                    <!-- feature 1 -->
-                    <div class="feature">
-                        <!-- svg -->
-                        <div class="feature__svgBox">
-                            <svg class="feature__svg">
-                                <use xlink:href="./dist/image.svg#secure"></use>
-                            </svg>
-                        </div>
-                        <h1 class="feature__heading">
-                            Secure Every Transation
-                        </h1>
-                        <p class="feature__body body-text">
-                            Your account is protected by Multifactor Authentication using a combination of email, SMS
-                            and Google Authenticator.
-                        </p>
+                <!-- feature 1 -->
+                <div class="feature">
+                    <!-- svg -->
+                    <div class="feature__svgBox">
+                        <svg class="feature__svg">
+                            <use xlink:href="./dist/image.svg#secure"></use>
+                        </svg>
                     </div>
+                    <h1 class="feature__heading">
+                        Secure Every Transation
+                    </h1>
+                    <p class="feature__body font-sm color-slate-blue">
+                        Your account is protected by Multifactor Authentication using a combination of email, SMS
+                        and Google Authenticator.
+                    </p>
+                </div>
 
-                    <!-- feature 2 -->
-                    <div class="feature">
-                        <!-- svg -->
-                        <div class="feature__svgBox">
-                            <svg class="feature__svg">
-                                <use xlink:href="./dist/image.svg#easytouse"></use>
-                            </svg>
-                        </div>
-                        <h1 class="feature__heading">
-                            Easiest To Use
-                        </h1>
-                        <p class="feature__body body-text">
-                            You only need 1 account to do all Bitcoin transactions whether it is buying, selling,
-                            investing or trading.
-                        </p>
+                <!-- feature 2 -->
+                <div class="feature">
+                    <!-- svg -->
+                    <div class="feature__svgBox">
+                        <svg class="feature__svg">
+                            <use xlink:href="./dist/image.svg#easytouse"></use>
+                        </svg>
                     </div>
+                    <h1 class="feature__heading">
+                        Easiest To Use
+                    </h1>
+                    <p class="feature__body font-sm color-slate-blue">
+                        You only need 1 account to do all Bitcoin transactions whether it is buying, selling,
+                        investing or trading.
+                    </p>
+                </div>
 
-                    <!-- feature 3 -->
-                    <div class="feature">
-                        <!-- svg -->
-                        <div class="feature__svgBox">
-                            <svg class="feature__svg">
-                                <use xlink:href="./dist/image.svg#fast"></use>
-                            </svg>
-                        </div>
-                        <h1 class="feature__heading">
-                            Fastest Mining
-                        </h1>
-                        <p class="feature__body body-text">
-                            The Rupiah deposit can be processed instantly and Rupiah withdrawal is processed in less
-                            than 1 business day.
-                        </p>
+                <!-- feature 3 -->
+                <div class="feature">
+                    <!-- svg -->
+                    <div class="feature__svgBox">
+                        <svg class="feature__svg">
+                            <use xlink:href="./dist/image.svg#fast"></use>
+                        </svg>
                     </div>
+                    <h1 class="feature__heading">
+                        Fastest Mining
+                    </h1>
+                    <p class="feature__body font-sm color-slate-blue">
+                        The Rupiah deposit can be processed instantly and Rupiah withdrawal is processed in less
+                        than 1 business day.
+                    </p>
                 </div>
             </div>
 
         </section>
 
-        <section class="price" id="pricing">
+        <section class="price p-t-50 p-b-50">
             <div class="container">
-                <h2 class=" price__heading heading heading--md">Paid plan starts with a 7-day free trial, No credit card
+                <h2 class="heading heading--md m-auto m-b-15 ta-c price__heading">Paid plan starts with a 7-day free trial, No credit card
                     required</h2>
-                <div class="price__btnGroup btn-group">
-                    <a href="javascript:void(0)" class="btn btn--sm btn--active" id="monthly">MONTHLY</a>
-                    <a href="javascript:void(0)" class="btn btn--sm" id="yearly">YEARLY - 2 MONTH FREE</a>
+                <div class="btn-group m-auto m-b-15">
+                    <a href="javascript:void(0)" class="btn btn--sm btn--active" id="monthly">monthly</a>
+                    <a href="javascript:void(0)" class="btn btn--sm" id="yearly">yearly - 2 month free</a>
                 </div>
 
                 <div class="price__cards" id="monthlyCards">
                     <!-- card 1 -->
-                    <div class="card">
-                        <p class="heading heading--sm card__heading">Starter</p>
-                        <p class="card__price" id="cardPrice1">$10</p>
-                        <p class="card__smallText">Per Month</p>
+                    <div class="card p-t-12 p-b-12">
+                        <p class="heading heading--sm m-b-7">Starter</p>
+                        <p class="card__price m-b-3" id="cardPrice1">$10</p>
+                        <p class="card__smallText m-b-15">Per Month</p>
 
-                        <ul class="card__list">
+                        <ul class="card__list m-b-15">
                             <li>1 Pixel ID*</li>
                             <li>URL</li>
                             <li>Up to 200 shortened links / month</li>
                         </ul>
-                        <a href="javascript:void(0)" class="btn btn--long card__btn" onclick="openModel()">START FREE TRIAL</a>
+                        <a href="javascript:void(0)" class="btn btn--long card__btn" >START FREE
+                            TRIAL</a>
                     </div>
                     <!-- card 2 -->
-                    <div class="card card--best">
-                        <p class="heading heading--sm card__heading">Professional</p>
-                        <p class="card__price" id="cardPrice2">$29</p>
-                        <p class="card__smallText">Per Month</p>
+                    <div class="card card--best p-t-12 p-b-12">
+                        <p  class="heading heading--sm m-b-7">Professional</p>
+                        <p class="card__price m-b-3" id="cardPrice2">$29</p>
+                        <p class="card__smallText m-b-15">Per Month</p>
 
-                        <ul class="card__list">
+                        <ul class="card__list m-b-15">
                             <li>5 Pixel ID*</li>
                             <li>1 Custom URL</li>
                             <li>Up to 1000 shortened links / month</li>
                             <li>5 Team Member</li>
                         </ul>
-                        <a href="javascript:void(0)" class="btn btn--long card__btn" onclick="openModel()"">START FREE TRIAL</a>
+                        <a href="javascript:void(0)" class="btn btn--long card__btn" >START FREE TRIAL</a>
                     </div>
                     <!-- card 3 -->
-                    <div class="card">
-                        <p class="heading heading--sm card__heading">Business</p>
-                        <p class="card__price" id="cardPrice3">$49</p>
-                        <p class="card__smallText">Per Month</p>
+                    <div class="card p-t-12 p-b-12">
+                            <p class="heading heading--sm m-b-7">Business</p>
+                            <p class="card__price m-b-3" id="cardPrice3">$49</p>
+                            <p class="card__smallText m-b-15">Per Month</p>
 
-                        <ul class="card__list">
-                            <li>Unlimited Pixel ID*</li>
-                            <li>Unlimited Custom URL</li>
-                            <li>Unlimited shortened links / month</li>
-                            <li>Unlimited Member</li>
-                        </ul>
-                        <a href="javascript:void(0)" class="btn btn--long card__btn" onclick="openModel()"">START FREE TRIAL</a>
+                            <ul class="card__list m-b-15">
+                                <li>Unlimited Pixel ID*</li>
+                                <li>Unlimited Custom URL</li>
+                                <li>Unlimited shortened links / month</li>
+                                <li>Unlimited Member</li>
+                            </ul>
+                            <a href="javascript:void(0)" class="btn btn--long card__btn" >START FREE TRIAL</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="splide" aria-label="Splide Basic HTML Example" id="splide">
-            <div class="container--edge">
-                <div class="splide__quote">
-                    <p class="heading--md splide__heading">What Customers Say</p>
+        <section class=" splide" aria-label="Splide Basic HTML Example" id="splide">
+                <div class="container--edge">
+                    <div class="splide__quote">
+                        <p class="heading--md splide__heading">What Customers Say</p>
+                    </div>
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <svg class="splide__slideQuote" width="40px" height="40px">
+                                    <use xlink:href="./dist/image.svg#quote" width="40px" height="40px">
+                                    </use>
+                                </svg>
+                                <figure>
+                                    <blockquote class="splide__body">"I started driving with Uber
+                                        because I liked the idea that my own car could make me money.
+                                        After just about a couple weeks, I saw that this was something I
+                                        wanted to do permanently."</blockquote>
+                                    <figcaption class="splide__auth">Brandon Roger / <span>OWW
+                                            Studio</span></figcaption>
+                                </figure>
+                            </li>
+                            <li class="splide__slide">
+                                <svg class="splide__slideQuote" width="40px" height="40px">
+                                    <use xlink:href="./dist/image.svg#quote" width="40px" height="40px">
+                                    </use>
+                                </svg>
+                                <figure>
+                                    <blockquote class="splide__body">"I wanted something where I could
+                                        meet new people and get out of the house. Uber has helped with
+                                        both of those things, plus I’m seeing new parts of the city I’ve
+                                        never seen before!"</blockquote>
+                                    <figcaption class="splide__auth">Sean Walker /<span> OWW
+                                            Studio</span></figcaption>
+                                </figure>
+                            </li>
+                            <li class="splide__slide">
+                                <svg class="splide__slideQuote" width="40px" height="40px">
+                                    <use xlink:href="./dist/image.svg#quote" width="40px" height="40px">
+                                    </use>
+                                </svg>
+                                <figure>
+                                    <blockquote class="splide__body">"This carousel was made using a
+                                        Javascript library called splide.js. I chose this library
+                                        because it was recently updated and seems to have very minimal
+                                        dependencies. it fit what I was looking for and custom css was
+                                        easy"</blockquote>
+                                    <figcaption class="splide__auth">Kailash /<span> OWW Studio</span>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="splide__slide">
+                                <svg class="splide__slideQuote" width="40px" height="40px">
+                                    <use xlink:href="./dist/image.svg#quote" width="40px" height="40px">
+                                    </use>
+                                </svg>
+                                <figure>
+                                    <blockquote class="splide__body">"I wanted something where I could
+                                        meet new people and get out of the house. Uber has helped with
+                                        both of those things, plus I’m seeing new parts of the city I’ve
+                                        never seen before!"</blockquote>
+                                    <figcaption class="splide__auth">Sean Walker /<span> OWW
+                                            Studio</span></figcaption>
+                                </figure>
+                            </li>
+                            <li class="splide__slide">
+                                <svg class="splide__slideQuote" width="40px" height="40px">
+                                    <use xlink:href="./dist/image.svg#quote" width="40px" height="40px">
+                                    </use>
+                                </svg>
+                                <figure>
+                                    <blockquote class="splide__body">"I started driving with Uber
+                                        because I liked the idea that my own car could make me money.
+                                        After just about a couple weeks, I saw that this was something I
+                                        wanted to do permanently."</blockquote>
+                                    <figcaption class="splide__auth">Brandon Roger / <span>OWW
+                                            Studio</span></figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">
-                            <svg class="splide__slideQuote" width="40px" height="40px">
-                                <use xlink:href="./dist/image.svg#quote" width="40px" height="40px"></use>
-                            </svg>
-                            <figure>
-                                <blockquote class="splide__body">"I started driving with Uber because I liked the idea that my own car could make me money. After just about a couple weeks, I saw that this was something I wanted to do permanently."</blockquote>
-                                <figcaption class="splide__auth">Brandon Roger / <span>OWW Studio</span></figcaption>
-                            </figure>
-                        </li>
-                        <li class="splide__slide">
-                            <svg class="splide__slideQuote" width="40px" height="40px">
-                                <use xlink:href="./dist/image.svg#quote" width="40px" height="40px"></use>
-                            </svg>
-                            <figure>
-                                <blockquote class="splide__body">"I wanted something where I could meet new people and get out of the house. Uber has helped with both of those things, plus I’m seeing new parts of the city I’ve never seen before!"</blockquote>
-                                <figcaption class="splide__auth">Sean Walker /<span> OWW Studio</span></figcaption>
-                            </figure>
-                        </li>
-                        <li class="splide__slide">
-                            <svg class="splide__slideQuote" width="40px" height="40px">
-                                <use xlink:href="./dist/image.svg#quote" width="40px" height="40px"></use>
-                            </svg>
-                            <figure>
-                                <blockquote class="splide__body">"This carousel was made using a Javascript library called splide.js. I chose this library because it was recently updated and seems to have very minimal dependencies. it fit what I was looking for and custom css was easy"</blockquote>
-                                <figcaption class="splide__auth">Kailash /<span> OWW Studio</span></figcaption>
-                            </figure>
-                        </li>
-                        <li class="splide__slide">
-                            <svg class="splide__slideQuote" width="40px" height="40px">
-                                <use xlink:href="./dist/image.svg#quote" width="40px" height="40px"></use>
-                            </svg>
-                            <figure>
-                                <blockquote class="splide__body">"I wanted something where I could meet new people and get out of the house. Uber has helped with both of those things, plus I’m seeing new parts of the city I’ve never seen before!"</blockquote>
-                                <figcaption class="splide__auth">Sean Walker /<span> OWW Studio</span></figcaption>
-                            </figure>
-                        </li>
-                        <li class="splide__slide">
-                            <svg class="splide__slideQuote" width="40px" height="40px">
-                                <use xlink:href="./dist/image.svg#quote" width="40px" height="40px"></use>
-                            </svg>
-                            <figure>
-                                <blockquote class="splide__body">"I started driving with Uber because I liked the idea that my own car could make me money. After just about a couple weeks, I saw that this was something I wanted to do permanently."</blockquote>
-                                <figcaption class="splide__auth">Brandon Roger / <span>OWW Studio</span></figcaption>
-                            </figure>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </section>
 
         <section class="carousel">
@@ -258,7 +273,9 @@
                             <use xlink:href="./dist/image.svg#quote" width="40px" height="40px"></use>
                         </svg>
                         <figure>
-                            <blockquote class="carousel__body">"I started driving with Uber because I liked the idea that my own car could make me money. After just about a couple weeks, I saw that this was something I wanted to do permanently."</blockquote>
+                            <blockquote class="carousel__body">"I started driving with Uber because I liked the idea
+                                that my own car could make me money. After just about a couple weeks, I saw that this
+                                was something I wanted to do permanently."</blockquote>
                             <figcaption class="carousel__auth">Brandon Roger / <span>OWW Studio</span></figcaption>
                         </figure>
                     </li>
@@ -267,7 +284,9 @@
                             <use xlink:href="./dist/image.svg#quote" width="40px" height="40px"></use>
                         </svg>
                         <figure>
-                            <blockquote class="carousel__body">"I wanted something where I could meet new people and get out of the house. Uber has helped with both of those things, plus I’m seeing new parts of the city I’ve never seen before!"</blockquote>
+                            <blockquote class="carousel__body">"I wanted something where I could meet new people and get
+                                out of the house. Uber has helped with both of those things, plus I’m seeing new parts
+                                of the city I’ve never seen before!"</blockquote>
                             <figcaption class="carousel__auth">Sean Walker /<span> OWW Studio</span></figcaption>
                         </figure>
                     </li>
@@ -276,7 +295,8 @@
                             <use xlink:href="./dist/image.svg#quote" width="40px" height="40px"></use>
                         </svg>
                         <figure>
-                            <blockquote class="carousel__body">"This carousel was made using plain Javascript"</blockquote>
+                            <blockquote class="carousel__body">"This carousel was made using plain Javascript"
+                            </blockquote>
                             <figcaption class="carousel__auth">Kailash /<span> OWW Studio</span></figcaption>
                         </figure>
                     </li>
@@ -285,7 +305,9 @@
                             <use xlink:href="./dist/image.svg#quote" width="40px" height="40px"></use>
                         </svg>
                         <figure>
-                            <blockquote class="carousel__body">"I started driving with Uber because I liked the idea that my own car could make me money. After just about a couple weeks, I saw that this was something I wanted to do permanently."</blockquote>
+                            <blockquote class="carousel__body">"I started driving with Uber because I liked the idea
+                                that my own car could make me money. After just about a couple weeks, I saw that this
+                                was something I wanted to do permanently."</blockquote>
                             <figcaption class="carousel__auth">Brandon Roger / <span>OWW Studio</span></figcaption>
                         </figure>
                     </li>
@@ -294,7 +316,9 @@
                             <use xlink:href="./dist/image.svg#quote" width="40px" height="40px"></use>
                         </svg>
                         <figure>
-                            <blockquote class="carousel__body">"I started driving with Uber because I liked the idea that my own car could make me money. After just about a couple weeks, I saw that this was something I wanted to do permanently."</blockquote>
+                            <blockquote class="carousel__body">"I started driving with Uber because I liked the idea
+                                that my own car could make me money. After just about a couple weeks, I saw that this
+                                was something I wanted to do permanently."</blockquote>
                             <figcaption class="carousel__auth">Brandon Roger / <span>OWW Studio</span></figcaption>
                         </figure>
                     </li>
@@ -303,7 +327,9 @@
                             <use xlink:href="./dist/image.svg#quote" width="40px" height="40px"></use>
                         </svg>
                         <figure>
-                            <blockquote class="carousel__body">"I started driving with Uber because I liked the idea that my own car could make me money. After just about a couple weeks, I saw that this was something I wanted to do permanently."</blockquote>
+                            <blockquote class="carousel__body">"I started driving with Uber because I liked the idea
+                                that my own car could make me money. After just about a couple weeks, I saw that this
+                                was something I wanted to do permanently."</blockquote>
                             <figcaption class="carousel__auth">Brandon Roger / <span>OWW Studio</span></figcaption>
                         </figure>
                     </li>
@@ -330,7 +356,7 @@
         </section>
     </main>
 
-    <footer class="footer" id="client">
+    <footer class="footer">
         <div class="container">
             <p class="footer__heading">WORKS WITH ANY PLATFORM</p>
             <div class="footer__svgs">
@@ -370,13 +396,13 @@
             <a onclick="toggleNav(open=false)" class="link">&times;</a>
         </div>
         <ul class="overlay__nav">
-            <li><a href="#benefit" onclick="toggleNav(open=false)" class="link">Benefit</a></li>
-            <li><a href="#pricing" onclick="toggleNav(open=false)" class="link">Pricing</a></li>
-            <li><a href="#splide" onclick="toggleNav(open=false)" class="link">Testimonials</a></li>
-            <li class="border-bottom"><a href="#client"  onclick="toggleNav(open=false)" class="link">Client</a></li>
+            <li><a href="javascript:void(0)" class="link">Benefit</a></li>
+            <li><a href="javascript:void(0)" class="link">Pricing</a></li>
+            <li><a href="javascript:void(0)" class="link">Testimonials</a></li>
+            <li class="border-bottom"><a href="javascript:void(0)" class="link">Client</a></li>
             <!-- <hr /> -->
             <li><a href="javascript:void(0)" onclick="toggleNav(open=false)" class="link">Login</a></li>
-            <li><a href="javascript:void(0)" onclick="toggleNav(open=false); openModel()" class="btn btn--sm">Register</a></li>
+            <li><a href="javascript:void(0)" id="mobileRegisterButton" class="btn btn--sm">Register</a></li>
         </ul>
     </div>
 
@@ -389,15 +415,18 @@
             <p class="modelInput__smallText">register in 1 minute</p>
             <form action="/autocrypt/" class="modelInput__form">
                 <div class="field">
-                    <input class="field__input" type="text" placeholder="Enter your name" minlength="3" required id="name-input" autocomplete="off">
+                    <input class="field__input" type="text" placeholder="Enter your name" minlength="3" required
+                        id="name-input" autocomplete="off">
                     <label for="Name" class="field__label">Name</label>
                 </div>
                 <div class="field">
-                    <input class="field__input" type="email" placeholder="eg. bob@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required id="email-input" autocomplete="off">
+                    <input class="field__input" type="email" placeholder="eg. bob@gmail.com"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required id="email-input" autocomplete="off">
                     <label for="email" class="field__label">Email</label>
                 </div>
                 <div class="field field--password">
-                    <input class="field__input" type="password" placeholder="Enter your password" minlength="5" required id="passwordField" autocomplete="off">
+                    <input class="field__input" type="password" placeholder="Enter your password" minlength="5" required
+                        id="passwordField" autocomplete="off">
                     <label for="password" class="field__label">Password</label>
                     <svg class="field__showPassword" id="showPassword">
                         <use xlink:href="./dist/image.svg#eye-solid" width="20" height="20" id="showPasswordIcon"></use>
@@ -409,6 +438,8 @@
             <p>Already a member <a href="javascript:void(0)" class="modelInput__login">Log in here</a></p>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>
+    <script src="./dist/script.js"></script>
 </body>
 
 </html>

@@ -9,20 +9,15 @@
     max-width: 1216px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
 
 
     @include for-tablet-portrait-down{
         max-width: 90%;
+        padding-left: 40px;
+        padding-right: 40px;
     }
-}
-
-.container--sm{
-    // total size 1440px - 340px (side gaps) - 40px (padding gap)
-    max-width: 1060px;
-    margin: auto;
-    padding: 0 20px;
 }
 
 .container--edge{

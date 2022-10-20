@@ -1,5 +1,4 @@
 
-
 // == mobile nav ==
 
 const mobileMenu = document.getElementById("mobile-menu");
@@ -14,6 +13,13 @@ function toggleScroll(allowScroll){
     // document.body.classList.toggle('no-scroll');
     document.body.scroll = allowScroll ? 'yes':'no';
 }
+
+const mobileNavLinks = document.querySelectorAll(".overlay__nav a");
+
+mobileNavLinks.forEach( (link,) => {
+    console.log(link)
+    link.addEventListener('click', () => {toggleNav(open=false)})
+});
 
 
 // == sticky header ==
@@ -85,6 +91,14 @@ function closeModel(){
 }
 
 
+const getStartedButton = document.getElementById('getStartedButton')
+const mobileRegisterButton = document.getElementById('mobileRegisterButton')
+
+getStartedButton.addEventListener('click', () => {openModel()});
+mobileRegisterButton.addEventListener('click', () => { 
+    toggleNav(false); 
+    openModel();
+});
 
 // == prices ==
 

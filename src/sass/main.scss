@@ -7,6 +7,7 @@
 @import 'utilities/variables';
 @import 'utilities/mixins';
 @import 'utilities/breakpoints';
+@import 'utilities/helpers';
 
 // base
 @import 'base/reset';
@@ -20,19 +21,16 @@
 @import 'components/field';
 
 // layout
-
-@import 'layout/forms';
 @import 'layout/header';
 @import 'layout/mobileNavOverlay';
 @import 'layout/modelInput';
-@import 'layout/hero';
-@import 'layout/features';
-@import 'layout/price';
 @import 'layout/splide';
 @import 'layout/carousel';
-
 @import 'layout/footer';
 
-@import 'utilities/helpers';
 @import 'layout/grid';
+
+//pages
+@import 'webpages/homepage';
+
 

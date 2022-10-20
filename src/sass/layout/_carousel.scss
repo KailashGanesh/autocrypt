@@ -9,7 +9,7 @@
         position: absolute;
         top: 30px;
         // left: 250px;
-        left: 212px;
+        left: 180px;
         min-height: 351px;
         background-image: url('/autocrypt/assests/images/green-quote.svg');
         // background-image: url('/dist/image.svg#green-quote');
@@ -30,7 +30,7 @@
     }
 
     &__heading {
-        max-width: 12ch;
+        max-width: 300px;
         margin: 40px 0 0 10px;
 
         @include for-tablet-portrait-down {

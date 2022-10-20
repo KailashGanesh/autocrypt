@@ -49,7 +49,7 @@
         &::after{
             content: "";
             position: absolute;
-            width: 6ch;
+            width: 73px;
             height: 1px;
             bottom: 0;
             left: 0;
@@ -59,7 +59,7 @@
 
     &__body{
         margin-top: 18px;
-        max-width: 30ch;
+        max-width: 300px;
         color: $slate-blue;
     }
 }

@@ -15,22 +15,66 @@
     }
 }
 
+@mixin font-color($name, $color){
+    .color-#{$name}{
+        color: $color;
+    }
+}
 
-// Break points
+@mixin font-size($name, $font-size, $line-height){
+    .font-#{$name}{
+        font-size: $font-size;
+        line-height: $line-height;
+    }
+}
 
-// @mixin for-phone-down {
-//     @media (max-width: 599px) { @content; }
-// }
+@mixin margin($number) {
+    @for $i from 1 through 15{
+        .m-r-#{$i} {
+            margin-right: #{$i * $number}px;
+        }
+        .m-l-#{$i} {
+            margin-left: #{$i * $number}px;
+        }
+        .m-t-#{$i} {
+            margin-top: #{$i * $number}px;
+        }
+        .m-b-#{$i} {
+            margin-bottom: #{$i * $number}px;
+        }
+    }
+}
 
-// @mixin for-tablet-portrait-down {
-//     @media (max-width: 899px) { @content; }
-// }
+
+@mixin padding($number) {
+    @for $i from 1 through 15{
+        .p-r-#{$i} {
+            padding-right: #{$i * $number}px;
+        }
+        .p-l-#{$i} {
+            padding-left: #{$i * $number}px;
+        }
+        .p-t-#{$i} {
+           padding-top: #{$i * $number}px;
+        }
+        .p-b-#{$i} {
+            padding-bottom: #{$i * $number}px;
+        }
+    }
+}
+
+@include margin(4);
+@include padding(4);
 
 
-// @mixin for-tablet-portrait-up{
-//     @media (min-width: 600px) {@content;}
-// }
+@mixin col-name($name, $noOfCol, $margin){
+    .col-#{$name}{
+        display: inline-block;
+        width: calc((100% - #{$margin*($noOfCol - 1)})/ $noOfCol );
+        margin-left: $margin;
 
-// @mixin tablet-up{
-//     @media only screen and (min-width: 769px) {@content;}
-// }
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+}

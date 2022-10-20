@@ -1,0 +1,59 @@
+
+.hero{
+    height: 100vh;
+    background-color: $dark-grey-blue;
+    padding: min(120px, 20vw) 0px 0px 0px;
+
+    .col-2-m-0{
+        @include for-phone-down{
+            width: 100%;
+        }
+    }
+    &__content{
+        margin: min(100px, 10vw) 0px 0px 0px;
+    }
+
+    &__heading{
+        max-width: 489px;
+    }
+
+    &__body{
+        max-width: 540px;
+    }
+
+    &__image{
+        max-width: 430px;
+        max-height: 700px;
+
+        .img-fluid{
+            max-width: 430px;
+            max-height: 700px;
+        }
+    }
+}
+
+.features{
+    margin-top: -50px;
+    z-index: $features-z-index;
+    position: relative;
+    font-size: 0;
+
+    .container--lg{
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+    }
+
+}
+
+.price{
+    font-size: 0;
+    // padding: 200px 0px;
+
+    &__heading{
+        max-width: 800px;
+    }
+    &__cards{
+        width: 100%;
+    }
+}

@@ -1,18 +1,5 @@
-// table and above
-// @media only screen and (min-width: 768px) {
-//     .mobile-hide{
-//         display: inline-block;
-//     }
+// genrate col classes - eg. 'col-2-m-0'
+@include col-name('2-m-0', 2, 0px);
 
-//     .desktop-hide{
-//         display: none;
-//     }
-
-//     .col{
-//         width: 50%;
-//         float: left;
-//     }
-// }
-
-
-
+@include col-name('3-m-50', 3, 50px);
+@include col-name('3-m-0', 3, 0px);
