@@ -1,27 +1,6 @@
 .footer{
-    padding: 200px 0px 114px 0px;
-    &__heading{
-        text-align: center;
-        color: $marine;
-        font-weight: $font-bold;
-        margin-bottom: 50px;
-    }
+    padding: 180px 0px 114px 0px;
 
-    &__svgs{
-        width: fit-content;
-        margin: auto;
-        margin-bottom: 180px;
-        font-size: 0;
-        text-align: center;
-    }
-
-    &__svg{
-        margin: 30px 40px 0px 0px;
-        vertical-align: middle;
-        &:last-child{
-            margin-right: 0;
-        }
-    }
 
     &__copyright{
         font-weight: 300;
@@ -36,7 +15,7 @@
         color: $slate-blue;
         font-size: 16px;
 
-        @include for-phone-down{
+        @include breakpoint('phone-below'){
             font-size: 14px;
         }
 

@@ -12,7 +12,7 @@
     transition: all 0.5s ease-in-out 0s;
     color: white;
     backdrop-filter: blur(6px);
-    padding: 0;
+    padding: 0 40px;
     a{
         color: white;
     }
@@ -27,7 +27,7 @@
     transition: all 0.3s ease-in-out 0s;
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 10px;
 }
 
 .overlay__nav{
@@ -35,7 +35,7 @@
     list-style: none;
     line-height: 2.5;
     font-size: 20px;
-    margin-top: 30%;
+    margin-top: 50%;
     li:nth-child(4){
         padding-bottom: 20px;
         margin-bottom: 20px;
@@ -47,5 +47,4 @@
 
 .overlay__nav--active{
     transform: translateX(0%);
-    padding: 0 40px;
 }

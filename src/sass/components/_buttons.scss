@@ -54,7 +54,7 @@
             background-color:white;
         }
 
-        @include for-phone-down{
+        @include breakpoint('phone-below'){
             font-size: 13px;
         }
     }

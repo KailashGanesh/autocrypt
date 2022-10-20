@@ -1,5 +1,5 @@
-// genrate col classes - eg. 'col-2-m-0'
-@include col-name('2-m-0', 2, 0px);
+// genrate col classes - eg. 'col-50'
+@include col-name('col2', 2, 0px);
 
-@include col-name('3-m-50', 3, 50px);
-@include col-name('3-m-0', 3, 0px);
+@include col-name('col3-m50', 3, 50px);
+@include col-name('col3', 3, 0px);

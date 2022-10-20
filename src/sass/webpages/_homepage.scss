@@ -1,16 +1,23 @@
 
 .hero{
     height: 100vh;
+    width: 100%;
     background-color: $dark-grey-blue;
     padding: min(120px, 20vw) 0px 0px 0px;
+    font-size: 0;
 
-    .col-2-m-0{
-        @include for-phone-down{
+    .container{
+        height: 100%;
+    }
+
+    &__content{
+        display: inline-block;
+        width: 50%;
+        margin: min(100px, 10vw) 0px 0px 0px;
+
+        @include breakpoint('phone-below'){
             width: 100%;
         }
-    }
-    &__content{
-        margin: min(100px, 10vw) 0px 0px 0px;
     }
 
     &__heading{
@@ -22,8 +29,13 @@
     }
 
     &__image{
-        max-width: 430px;
-        max-height: 700px;
+        width: 50%;
+        height: 100%;
+        display: inline-block;
+        background-image: url('https://raw.githubusercontent.com/KailashGanesh/autocrypt/main/assests/images/phone-hand-optimized.webp');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
 
         .img-fluid{
             max-width: 430px;

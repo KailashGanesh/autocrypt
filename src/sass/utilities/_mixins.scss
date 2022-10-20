@@ -68,7 +68,7 @@
 
 
 @mixin col-name($name, $noOfCol, $margin){
-    .col-#{$name}{
+    .#{$name}{
         display: inline-block;
         width: calc((100% - #{$margin*($noOfCol - 1)})/ $noOfCol );
         margin-left: $margin;
