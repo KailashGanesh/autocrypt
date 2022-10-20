@@ -13,13 +13,6 @@
         display: none !important;
     }
 }
-.col{
-    width: 50%;
-    float: left;
-    @include breakpoint('phone-below'){
-        width: 100% !important;
-    }
-}
 
 .link{
     color: inherit;

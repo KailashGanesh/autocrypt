@@ -496,16 +496,6 @@
   }
 }
 
-.col {
-  width: 50%;
-  float: left;
-}
-@media (max-width: 767px) {
-  .col {
-    width: 100% !important;
-  }
-}
-
 .link {
   color: inherit;
   cursor: pointer;
@@ -905,33 +895,6 @@ a, a:visited, a:active {
 
 .field--password .field__input {
   padding-right: 40px;
-}
-
-.col2 {
-  display: inline-block;
-  width: calc((100% - 0px) / 2);
-  margin-left: 0px;
-}
-.col2:first-child {
-  margin-left: 0;
-}
-
-.col3-m50 {
-  display: inline-block;
-  width: calc((100% - 100px) / 3);
-  margin-left: 50px;
-}
-.col3-m50:first-child {
-  margin-left: 0;
-}
-
-.col3 {
-  display: inline-block;
-  width: calc((100% - 0px) / 3);
-  margin-left: 0px;
-}
-.col3:first-child {
-  margin-left: 0;
 }
 
 /* header */

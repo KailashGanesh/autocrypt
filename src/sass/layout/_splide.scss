@@ -84,7 +84,7 @@
     &__auth {
         font-size: 18px;
         color: $marine;
-        font-weight: $font-medium;
+        font-weight: 500;
         transition: color 0.3s ease-in-out 0s;
 
         @include breakpoint('phone-below'){
