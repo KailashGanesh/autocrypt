@@ -28,7 +28,7 @@
     }
 }
 
-@mixin margin($number) {
+@mixin spacing($number) {
     @for $i from 1 through 15{
         .m-r-#{$i} {
             margin-right: #{$i * $number}px;
@@ -42,12 +42,6 @@
         .m-b-#{$i} {
             margin-bottom: #{$i * $number}px;
         }
-    }
-}
-
-
-@mixin padding($number) {
-    @for $i from 1 through 15{
         .p-r-#{$i} {
             padding-right: #{$i * $number}px;
         }
@@ -63,8 +57,32 @@
     }
 }
 
-@include margin(4);
-@include padding(4);
+@include spacing(4);
+
+@mixin dimension($height,$width){
+    height: #{$height}px;
+    width: #{$width}px;
+}
+
+// @mixin padding($number) {
+//     @for $i from 1 through 15{
+//         .p-r-#{$i} {
+//             padding-right: #{$i * $number}px;
+//         }
+//         .p-l-#{$i} {
+//             padding-left: #{$i * $number}px;
+//         }
+//         .p-t-#{$i} {
+//            padding-top: #{$i * $number}px;
+//         }
+//         .p-b-#{$i} {
+//             padding-bottom: #{$i * $number}px;
+//         }
+//     }
+// }
+
+// @include margin(4);
+// @include padding(4);
 
 
 // @mixin col-name($name, $noOfCol, $margin){

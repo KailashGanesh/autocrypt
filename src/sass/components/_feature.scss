@@ -34,9 +34,7 @@
     }
 
     &__svg{
-        width: 40px;
-        height: 40px;
-
+        @include dimension(40,40);
     }
 
     &__heading{
@@ -49,8 +47,7 @@
         &::after{
             content: "";
             position: absolute;
-            width: 73px;
-            height: 1px;
+            @include dimension(1,73);
             bottom: 0;
             left: 0;
             border-bottom: 4px solid $primary-green;

@@ -19,17 +19,13 @@
 @import'components/card';
 @import 'components/feature';
 @import 'components/field';
+@import 'components/hero';
 
 // layout
 @import 'layout/header';
 @import 'layout/mobileNavOverlay';
-@import 'layout/modelInput';
+@import 'layout/modelbox';
 @import 'layout/splide';
 @import 'layout/carousel';
 @import 'layout/footer';
-
-
-//pages
-@import 'webpages/homepage';
-
-
+@import 'layout/other';

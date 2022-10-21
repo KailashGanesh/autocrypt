@@ -1,0 +1,25 @@
+.features{
+    margin-top: -50px;
+    z-index: $features-z-index;
+    position: relative;
+    font-size: 0;
+
+    .container--lg{
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+    }
+
+}
+
+.price{
+    font-size: 0;
+    // padding: 200px 0px;
+
+    &__heading{
+        max-width: 800px;
+    }
+    &__cards{
+        width: 100%;
+    }
+}

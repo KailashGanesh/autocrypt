@@ -16,8 +16,7 @@ function toggleScroll(allowScroll){
 
 const mobileNavLinks = document.querySelectorAll(".overlay__nav a");
 
-mobileNavLinks.forEach( (link,) => {
-    console.log(link)
+mobileNavLinks.forEach( (link) => {
     link.addEventListener('click', () => {toggleNav(open=false)})
 });
 
@@ -61,7 +60,7 @@ new Splide( splide, {
 
 // == model == 
 
-let model = document.getElementById("modelInput")
+let model = document.getElementById("modelbox")
 function openModel(){
     let black = "rgb(0,0,0,0.5)"
     // model.style.display = 'block';
@@ -72,7 +71,7 @@ function openModel(){
 
     window.setTimeout(function(){
         model.classList.add('model-background');
-    },300);
+    },190);
 
     // prevent  background scroll
     toggleScroll(allowScroll = false);
@@ -82,7 +81,7 @@ function closeModel(){
     model.classList.remove('model-background');
     window.setTimeout(function(){
         model.classList.remove('model-animate');
-    },200);
+    },180);
     window.setTimeout(function(){
         model.classList.remove('model-shown');
     },700); // timed to match animation-duration
@@ -176,7 +175,6 @@ const emailInput = document.getElementById("email-input");
 const passwordInput = document.getElementById('passwordField')
 
 nameInput.addEventListener("input", (event) => {
-    console.log(nameInput.validity.tooShort);
     if (nameInput.validity.tooShort){
         nameInput.setCustomValidity("Name should be longer then 2 letters");
         nameInput.style.borderColor = "tomato";
@@ -199,7 +197,6 @@ emailInput.addEventListener("input", (event) => {
 });
 
 passwordInput.addEventListener("input", (event) => {
-    console.log(passwordInput.validity.tooShort);
     if (passwordInput.validity.tooShort){
         passwordInput.setCustomValidity("Password should be longer then 4 letters");
         passwordInput.style.borderColor = "tomato";
@@ -218,9 +215,9 @@ const passwordInputIcon = document.getElementById('showPasswordIcon')
 showPassword.addEventListener('click', () => {
     if (passwordInput.type == "password"){
         passwordInput.type ='text';
-        passwordInputIcon.setAttribute('xlink:href', "./dist/image.svg#eye-slash-solid")
+        passwordInputIcon.setAttribute('href', "./dist/image.svg#eye-slash-solid")
     }else{
         passwordInput.type ='password';
-        passwordInputIcon.setAttribute('xlink:href', "./dist/image.svg#eye-solid")
+        passwordInputIcon.setAttribute('href', "./dist/image.svg#eye-solid")
     }
 });

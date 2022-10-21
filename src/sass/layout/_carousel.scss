@@ -69,8 +69,7 @@
     &__slide{
         display: inline-block;
         white-space: normal;
-        width:420px;
-        height:500px;
+        @include dimension(500,420);
         padding: 80px 50px 60px 50px;
         border-radius: 6px;
         background-color: white;
