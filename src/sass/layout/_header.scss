@@ -6,24 +6,22 @@
     right: 0;
     left: 0;
     min-height: 70px;
-    fill: var(--main-white-color);
-    color: white;
     transition: all 0.2s ease-in-out 0s;
     z-index: $header-z-index;
     background-color: transparent;
     padding-top: 20px;
-    backdrop-filter: blur(10px);
 
-    &__logo{
-        font-size: 26px;
-        color: white;
-    }
+    // &__logo{
+    //     font-size: 26px;
+    //     color: white;
+    // }
 
     &--sticky{
         background-color: rgb(0,0,0,0.8);
         position: fixed;
         padding-top: 20px;
         padding-bottom: 20px;
+        backdrop-filter: blur(10px);
     }
 }
 
@@ -34,14 +32,8 @@
     @include clearfix;
 
     li{
-        // float: left;
         list-style: none;
         display: inline-block;
-    }
-
-    &__link{
-        color: white;
-        @include link
     }
 
     &__left{
@@ -53,8 +45,6 @@
         text-align: start;
         line-height: 2.2;
         vertical-align: middle;
-        @include breakpoint('tablet-below'){
-        }
     }
 
     &__center{

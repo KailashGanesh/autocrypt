@@ -92,8 +92,10 @@ function closeModel(){
 
 const getStartedButton = document.getElementById('getStartedButton')
 const mobileRegisterButton = document.getElementById('mobileRegisterButton')
+const navRegister = document.getElementById('navRegister')
 
 getStartedButton.addEventListener('click', () => {openModel()});
+navRegister.addEventListener('click', () => {openModel()});
 mobileRegisterButton.addEventListener('click', () => { 
     toggleNav(false); 
     openModel();

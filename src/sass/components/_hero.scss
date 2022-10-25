@@ -31,11 +31,13 @@
         width: 50%;
         height: 100%;
         display: inline-block;
-        background-image: url('https://raw.githubusercontent.com/KailashGanesh/autocrypt/main/assests/images/phone-hand-optimized.webp');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
+        // background-image: url('https://raw.githubusercontent.com/KailashGanesh/autocrypt/main/assests/images/phone-hand-optimized.webp');
+        // background-repeat: no-repeat;
+        // background-position: center center;
+        // background-size: contain;
 
+        background: url("https://raw.githubusercontent.com/KailashGanesh/autocrypt/main/assests/images/phone-hand-optimized.webp") no-repeat center center;
+        background-size: contain;
         .img-fluid{
             max-width: 430px;
             max-height: 700px;

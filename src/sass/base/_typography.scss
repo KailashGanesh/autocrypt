@@ -12,29 +12,36 @@ a, a:visited, a:active{
     text-decoration: none;
 }
 
-.heading{
-    font-weight: 700;
+// .heading{
+//     font-weight: 700;
 
-    &--lg{
-        font-size: 48px;
-        line-height: normal;
-    }
+//     &--lg{
+//         font-size: 48px;
+//         line-height: normal;
+//     }
 
-    &--md{
-        font-size: 40px;
-        line-height: normal;
-    }
+//     &--md{
+//         font-size: 40px;
+//         line-height: normal;
+//     }
 
-    &--sm{
-        font-size: 24px;
-        line-height: normal;
-    }
-}
+//     &--sm{
+//         font-size: 24px;
+//         line-height: normal;
+//     }
+// }
+
+.fw-700{font-weight: 700;}
 
 
-// font size eg. 'font-sm'
-@include font-size('sm', 16px, 2);
-@include font-size('lg', 18px, 2);
+// font size eg. 'font-16'
+@include font-size('24', 24px, normal);
+@include font-size('40', 40px, normal);
+@include font-size('48', 48px, normal);
+
+
+@include font-size('16', 16px, 2);
+@include font-size('18', 18px, 2);
 
 // font color eg. 'color-white'
 @include font-color('white',#ffffff);

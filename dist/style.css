@@ -590,28 +590,31 @@ a, a:visited, a:active {
   text-decoration: none;
 }
 
-.heading {
+.fw-700 {
   font-weight: 700;
 }
-.heading--lg {
-  font-size: 48px;
-  line-height: normal;
-}
-.heading--md {
-  font-size: 40px;
-  line-height: normal;
-}
-.heading--sm {
+
+.font-24 {
   font-size: 24px;
   line-height: normal;
 }
 
-.font-sm {
+.font-40 {
+  font-size: 40px;
+  line-height: normal;
+}
+
+.font-48 {
+  font-size: 48px;
+  line-height: normal;
+}
+
+.font-16 {
   font-size: 16px;
   line-height: 2;
 }
 
-.font-lg {
+.font-18 {
   font-size: 18px;
   line-height: 2;
 }
@@ -923,9 +926,7 @@ a, a:visited, a:active {
   width: 50%;
   height: 100%;
   display: inline-block;
-  background-image: url("https://raw.githubusercontent.com/KailashGanesh/autocrypt/main/assests/images/phone-hand-optimized.webp");
-  background-repeat: no-repeat;
-  background-position: center center;
+  background: url("https://raw.githubusercontent.com/KailashGanesh/autocrypt/main/assests/images/phone-hand-optimized.webp") no-repeat center center;
   background-size: contain;
 }
 .hero__image .img-fluid {
@@ -940,23 +941,17 @@ a, a:visited, a:active {
   right: 0;
   left: 0;
   min-height: 70px;
-  fill: var(--main-white-color);
-  color: white;
   transition: all 0.2s ease-in-out 0s;
   z-index: 2;
   background-color: transparent;
   padding-top: 20px;
-  backdrop-filter: blur(10px);
-}
-.header__logo {
-  font-size: 26px;
-  color: white;
 }
 .header--sticky {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
   padding-top: 20px;
   padding-bottom: 20px;
+  backdrop-filter: blur(10px);
 }
 
 .nav {
@@ -970,14 +965,6 @@ a, a:visited, a:active {
 .nav li {
   list-style: none;
   display: inline-block;
-}
-.nav__link {
-  color: white;
-  transition: all 0.3s ease-in-out 0s;
-  cursor: pointer;
-}
-.nav__link:hover {
-  color: #1fdb84;
 }
 .nav__left {
   width: 50%;
