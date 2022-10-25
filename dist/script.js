@@ -15,11 +15,13 @@ function toggleScroll(allowScroll){
 }
 
 const mobileNavLinks = document.querySelectorAll(".overlay__nav a");
+const hamburger = document.getElementById("hamburger");
 
 mobileNavLinks.forEach( (link) => {
     link.addEventListener('click', () => {toggleNav(open=false)})
 });
 
+hamburger.addEventListener('click', () => {toggleNav(open=true)})
 
 // == sticky header ==
 
