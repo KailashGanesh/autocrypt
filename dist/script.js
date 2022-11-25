@@ -64,7 +64,6 @@ new Splide( splide, {
 
 let model = document.getElementById("modelbox")
 function openModel(){
-    let black = "rgb(0,0,0,0.5)"
     // model.style.display = 'block';
     model.classList.add('model-shown');
     window.setTimeout(function(){
@@ -148,16 +147,6 @@ pageLink.forEach(pageBtn => {
     pageBtn.addEventListener('click', (e) => {
         let slideNumber = pageBtn.getAttribute('data-slide');
         carouselList.scrollLeft = slideNumber * slideWidth;
-
-    //     pageLink.forEach( element =>{
-    //         element.classList.remove('page__link--active')
-    //     })
-    //     carouselSlides.forEach(element => {
-    //         element.classList.remove('slide--active')
-    //     })
-
-    //     pageBtn.classList.add('page__link--active')
-    //    carouselSlides[slideNumber].classList.add('slide--active');
      })
 })
 
